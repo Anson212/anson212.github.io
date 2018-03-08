@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="flex," />
 
 
 
@@ -100,16 +100,20 @@
 
 
 
-<meta name="description" content="行至水穷处,坐看云起时">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lolint&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/categories/Hexo教程/index.html">
-<meta property="og:site_name" content="Lolint&#39;s Blog">
-<meta property="og:description" content="行至水穷处,坐看云起时">
+<meta name="description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
+<meta name="keywords" content="flex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex布局全解析">
+<meta property="og:url" content="http://yoursite.com/2018/02/11/flex布局全解析/index.html">
+<meta property="og:site_name" content="Lolint&#39;s">
+<meta property="og:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
+<meta property="og:updated_time" content="2018-03-08T15:05:54.147Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lolint&#39;s Blog">
-<meta name="twitter:description" content="行至水穷处,坐看云起时">
+<meta name="twitter:title" content="flex布局全解析">
+<meta name="twitter:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
+<meta name="twitter:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
 
 
 
@@ -139,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Hexo教程/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/11/flex布局全解析/"/>
 
 
 
 
 
-  <title>分类: Hexo教程 | Lolint's Blog</title>
+  <title>flex布局全解析 | Lolint's</title>
   
 
 
@@ -164,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -175,7 +179,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Lolint's Blog</span>
+        <span class="site-title">Lolint's</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -268,55 +272,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo教程<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/flex布局全解析/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lolint">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lolint's">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/11/Hexo教程/" itemprop="url">
-              
-                <span itemprop="name">Hexo教程</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">flex布局全解析</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-11T21:55:56+08:00"
-              content="2018-02-11" >
-          02-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T21:55:56+08:00">
+                2018-02-11
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术类/" itemprop="url" rel="index">
+                    <span itemprop="name">技术类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  206
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p><img src="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png" alt="image">  </p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.<br>3点原因:<br>感觉还比较新, 担心兼容性不好.<br>普通的布局方式能满足我的绝大多数需求.<br>好像蛮复杂的.<br>最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.<a id="more"></a>  </p>
+<h1 id="什么是flex"><a href="#什么是flex" class="headerlink" title="什么是flex"></a>什么是flex</h1><p>Flexbox Layout，官方名为 CSS Flexible Box Layout Module, 意为”弹性布局”，是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写.  </p>
+<p>任何一个容器都可以指定为flex布局。   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>行内元素也可以使用flex布局。    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+    
+   
+
+     
+    
+    
+     
+    <div>
+        
+     </div>
+      
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/flex/" rel="tag"><i class="fa fa-tag"></i> flex</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -324,6 +471,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -344,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -410,6 +570,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是flex"><span class="nav-number">2.</span> <span class="nav-text">什么是flex</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -457,8 +633,9 @@
 
 
 <div class="theme-info">
+  <div>Lolint的小站</div>
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6字</span>
+  <span class="post-count">博客全站共206字</span>
 </div>
         
 
@@ -570,6 +747,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -638,34 +819,6 @@
 color="0,0,255" opacity='0.7' zIndex="-1" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 
-
-<div id="hexo-helper-live2d">
-  <canvas id="live2dcanvas" width="150" height="300"></canvas>
-</div>
-<style>
-  #live2dcanvas{
-    position: fixed;
-    width: 150px;
-    height: 300px;
-    opacity:0.7;
-    right: 0px;
-    z-index: 999;
-    pointer-events: none;
-    bottom: -20px;
-  }
-</style>
-<script type="text/javascript" src="/live2d/device.min.js"></script>
-<script type="text/javascript">
-const loadScript = function loadScript(c,b){var a=document.createElement("script");a.type="text/javascript";"undefined"!=typeof b&&(a.readyState?a.onreadystatechange=function(){if("loaded"==a.readyState||"complete"==a.readyState)a.onreadystatechange=null,b()}:a.onload=function(){b()});a.src=c;document.body.appendChild(a)};
-(function(){
-  if((typeof(device) != 'undefined') && (device.mobile())){
-    document.getElementById("live2dcanvas").style.width = '75px';
-    document.getElementById("live2dcanvas").style.height = '150px';
-  }else
-    if (typeof(device) === 'undefined') console.error('Cannot find current-device script.');
-  loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5);});
-})();
-</script>
 
   
   
