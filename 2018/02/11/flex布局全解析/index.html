@@ -100,19 +100,23 @@
 
 
 
-<meta name="description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
+<meta name="description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
 <meta name="keywords" content="flex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flex布局全解析">
 <meta property="og:url" content="http://yoursite.com/2018/02/11/flex布局全解析/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
-<meta property="og:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
+<meta property="og:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
-<meta property="og:updated_time" content="2018-03-08T15:05:54.147Z">
+<meta property="og:image" content="http://img0.ph.126.net/FW70OwNnrYMBFCG9uHyXBA==/6597802041402786807.png">
+<meta property="og:image" content="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg">
+<meta property="og:image" content="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png">
+<meta property="og:image" content="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png">
+<meta property="og:updated_time" content="2018-03-08T15:59:14.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flex布局全解析">
-<meta name="twitter:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.3点原因:感觉还比较新, 担心兼容性不好.普通的布局方式能满足我的绝大多数需求.好像蛮复杂的.最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
+<meta name="twitter:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
 <meta name="twitter:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
 
 
@@ -369,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  206
+                  618
                 </span>
               
 
@@ -385,7 +389,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -407,12 +411,95 @@
 
       
         <p><img src="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png" alt="image">  </p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.<br>3点原因:<br>感觉还比较新, 担心兼容性不好.<br>普通的布局方式能满足我的绝大多数需求.<br>好像蛮复杂的.<br>最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.<a id="more"></a>  </p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.  </p>
+<p>最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.</p>
+<p>在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。  </p>
+<a id="more"></a>  
 <h1 id="什么是flex"><a href="#什么是flex" class="headerlink" title="什么是flex"></a>什么是flex</h1><p>Flexbox Layout，官方名为 CSS Flexible Box Layout Module, 意为”弹性布局”，是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写.  </p>
 <p>任何一个容器都可以指定为flex布局。   </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>行内元素也可以使用flex布局。    </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="flex的基本概念"><a href="#flex的基本概念" class="headerlink" title="flex的基本概念"></a>flex的基本概念</h1><p><img src="http://img0.ph.126.net/FW70OwNnrYMBFCG9uHyXBA==/6597802041402786807.png" alt="image">     </p>
+<p>1、采用flex布局的元素被称为<strong>flex容器（flex container）</strong>，他的子元素即为<strong>flex元素（flex item）</strong>。<br>2、flex容器中包含两个相互垂直的轴，即<strong>主轴（main axis）</strong>和<strong>副轴（cross axis）</strong>。<br>3、flex元素沿主轴从<strong>主轴起点 (main start)</strong>到<strong>主轴终点 (main end)</strong>依次排布。<br>4、如果flex容器包含多行flex元素，则<strong>flex行（flex lines）</strong>沿副轴从<strong>副轴起点（cross start）</strong>到<strong>副轴终点（cross end）</strong>依次排布。<br>5、单个flex元素占据的主轴空间叫做<strong>主轴程度（main size）</strong>，占据的副轴空间叫做<strong>副轴长度（cross size）</strong>。   </p>
+<h1 id="flex的兼容性"><a href="#flex的兼容性" class="headerlink" title="flex的兼容性"></a>flex的兼容性</h1><p><img src="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg" alt="image"></p>
+<h1 id="flex属性"><a href="#flex属性" class="headerlink" title="flex属性"></a>flex属性</h1><h2 id="用于flex容器的属性"><a href="#用于flex容器的属性" class="headerlink" title="用于flex容器的属性"></a>用于flex容器的属性</h2><p>以下6个属性设置在容器上    </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flex-direction</td>
+<td>主轴方向</td>
+</tr>
+<tr>
+<td>flex-wrap</td>
+<td>换行样式</td>
+</tr>
+<tr>
+<td>flex-flow</td>
+<td>前两个的简写形式</td>
+</tr>
+<tr>
+<td>justify-content</td>
+<td>主轴对齐方式</td>
+</tr>
+<tr>
+<td>align-items</td>
+<td>单行的副轴对齐方式</td>
+</tr>
+<tr>
+<td>align-content</td>
+<td>多行的副轴对齐方式</td>
+</tr>
+</tbody>
+</table>
+<p>注意：<br>flex容器的column-*属性会失效。<br>flex容器无法拥有::first-line 和 ::first-letter虚元素。   </p>
+<h2 id="flex-direction属性"><a href="#flex-direction属性" class="headerlink" title="flex-direction属性"></a>flex-direction属性</h2><p>flex-direction 属性决定主轴方向(即项目的排序方向)。</p>
+<table>
+<thead>
+<tr>
+<th>含义</th>
+<th>主轴方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可选值</td>
+<td>row 、row-reverse 、 column 、 column-reverse</td>
+</tr>
+<tr>
+<td>默认值</td>
+<td>row</td>
+</tr>
+<tr>
+<td>row</td>
+<td>主轴为水平方向，七点在左端。</td>
+</tr>
+<tr>
+<td>row-reverse</td>
+<td>主轴为水平方向，起点在右端。</td>
+</tr>
+<tr>
+<td>column</td>
+<td>主轴为垂直方向，起点在上沿。</td>
+</tr>
+<tr>
+<td>column-reverse</td>
+<td>主轴为垂直方向，起点在下沿。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-direction: row  | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png" alt="image"> </p>
+<h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
+<p><img src="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png" alt="image"> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -579,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是flex"><span class="nav-number">2.</span> <span class="nav-text">什么是flex</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是flex"><span class="nav-number">2.</span> <span class="nav-text">什么是flex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex的基本概念"><span class="nav-number">3.</span> <span class="nav-text">flex的基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex的兼容性"><span class="nav-number">4.</span> <span class="nav-text">flex的兼容性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex属性"><span class="nav-number">5.</span> <span class="nav-text">flex属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用于flex容器的属性"><span class="nav-number">5.1.</span> <span class="nav-text">用于flex容器的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-direction属性"><span class="nav-number">5.2.</span> <span class="nav-text">flex-direction属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex-wrap属性"><span class="nav-number">5.3.</span> <span class="nav-text">flex-wrap属性</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -632,7 +719,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共206字</span>
+  <span class="post-count">博客全站共618字</span>
 </div>
         
 
