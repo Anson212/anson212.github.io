@@ -103,7 +103,7 @@
 <meta name="description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
 <meta name="keywords" content="flex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flex布局全解析">
+<meta property="og:title" content="flex布局学习和总结">
 <meta property="og:url" content="http://yoursite.com/2018/02/11/flex布局全解析/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
 <meta property="og:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
@@ -113,9 +113,9 @@
 <meta property="og:image" content="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg">
 <meta property="og:image" content="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png">
 <meta property="og:image" content="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png">
-<meta property="og:updated_time" content="2018-03-08T15:59:14.630Z">
+<meta property="og:updated_time" content="2018-03-09T18:15:44.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flex布局全解析">
+<meta name="twitter:title" content="flex布局学习和总结">
 <meta name="twitter:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。">
 <meta name="twitter:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
 
@@ -153,7 +153,7 @@
 
 
 
-  <title>flex布局全解析 | Lolint's</title>
+  <title>flex布局学习和总结 | Lolint's</title>
   
 
 
@@ -259,9 +259,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -307,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">flex布局全解析</h1>
+          <h1 class="post-title" itemprop="name headline">flex布局学习和总结</h1>
         
 
         <div class="post-meta">
@@ -411,17 +445,17 @@
 
       
         <p><img src="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png" alt="image">  </p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.  </p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有<code>flex</code>这个布局方式, 但是始终没有去学它.  </p>
 <p>最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.</p>
 <p>在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。  </p>
 <a id="more"></a>  
-<h1 id="什么是flex"><a href="#什么是flex" class="headerlink" title="什么是flex"></a>什么是flex</h1><p>Flexbox Layout，官方名为 CSS Flexible Box Layout Module, 意为”弹性布局”，是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写.  </p>
-<p>任何一个容器都可以指定为flex布局。   </p>
+<h1 id="什么是flex"><a href="#什么是flex" class="headerlink" title="什么是flex"></a>什么是flex</h1><p><code>Flexbox Layout</code>，官方名为 <code>CSS Flexible Box Layout Module</code>, 意为”弹性布局”，是<code>CSS3</code>中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局<code>CSS Grid Layout Module</code>). <code>flex</code>是<code>flexible</code>的缩写.  </p>
+<p>任何一个容器都可以指定为<code>flex</code>布局。   </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>行内元素也可以使用flex布局。    </p>
+<p>行内元素也可以使用<code>flex</code>布局。    </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="flex的基本概念"><a href="#flex的基本概念" class="headerlink" title="flex的基本概念"></a>flex的基本概念</h1><p><img src="http://img0.ph.126.net/FW70OwNnrYMBFCG9uHyXBA==/6597802041402786807.png" alt="image">     </p>
-<p>1、采用flex布局的元素被称为<strong>flex容器（flex container）</strong>，他的子元素即为<strong>flex元素（flex item）</strong>。<br>2、flex容器中包含两个相互垂直的轴，即<strong>主轴（main axis）</strong>和<strong>副轴（cross axis）</strong>。<br>3、flex元素沿主轴从<strong>主轴起点 (main start)</strong>到<strong>主轴终点 (main end)</strong>依次排布。<br>4、如果flex容器包含多行flex元素，则<strong>flex行（flex lines）</strong>沿副轴从<strong>副轴起点（cross start）</strong>到<strong>副轴终点（cross end）</strong>依次排布。<br>5、单个flex元素占据的主轴空间叫做<strong>主轴程度（main size）</strong>，占据的副轴空间叫做<strong>副轴长度（cross size）</strong>。   </p>
+<p>1、采用<code>flex</code>布局的元素被称为<code>flex</code><strong>容器</strong><code>（flex container）</code>，他的子元素即为<code>flex</code>元素<code>（flex item）</code>。<br>2、<code>flex</code>容器中包含两个相互垂直的轴，即<strong>主轴</strong>（main axis）和<strong>副轴</strong><code>（cross axis)</code>。<br>3、flex元素沿主轴从<strong>主轴起点</strong> <code>(main start)</code>到<strong>主轴终点 </strong><code>(main end)</code>依次排布。<br>4、如果<code>flex</code>容器包含多行<code>flex</code>元素，则<code>flex</code>行<code>（flex lines）</code>沿<strong>副轴</strong>从<strong>副轴起点</strong><code>（cross start）</code>到<strong>副轴</strong>终点<code>（cross end)</code>依次排布。<br>5、单个<code>flex</code>元素占据的主轴空间叫做<strong>主轴程度</strong><code>（main size）</code>，占据的副轴空间叫做<strong>副轴</strong>长度<code>（cross size）</code>。   </p>
 <h1 id="flex的兼容性"><a href="#flex的兼容性" class="headerlink" title="flex的兼容性"></a>flex的兼容性</h1><p><img src="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg" alt="image"></p>
 <h1 id="flex属性"><a href="#flex属性" class="headerlink" title="flex属性"></a>flex属性</h1><h2 id="用于flex容器的属性"><a href="#用于flex容器的属性" class="headerlink" title="用于flex容器的属性"></a>用于flex容器的属性</h2><p>以下6个属性设置在容器上    </p>
 <table>
@@ -458,8 +492,8 @@
 </tr>
 </tbody>
 </table>
-<p>注意：<br>flex容器的column-*属性会失效。<br>flex容器无法拥有::first-line 和 ::first-letter虚元素。   </p>
-<h2 id="flex-direction属性"><a href="#flex-direction属性" class="headerlink" title="flex-direction属性"></a>flex-direction属性</h2><p>flex-direction 属性决定主轴方向(即项目的排序方向)。</p>
+<p>注意：<br><code>flex</code>容器的<code>column-*</code>属性会失效。<br><code>flex</code>容器无法拥有<code>::first-line</code>和 <code>::first-letter</code>虚元素。   </p>
+<h2 id="flex-direction属性"><a href="#flex-direction属性" class="headerlink" title="flex-direction属性"></a>flex-direction属性</h2><p><code>flex-direction</code> 属性决定主轴方向(即项目的排序方向)。</p>
 <table>
 <thead>
 <tr>
@@ -496,7 +530,7 @@
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-direction: row  | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png" alt="image"> </p>
-<h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
+<h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><p>默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行。</p>
 <p><img src="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png" alt="image"> </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -877,6 +911,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 

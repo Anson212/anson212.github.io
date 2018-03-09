@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[flex布局学习和总结]]></title>
+    <url>%2F2018%2F02%2F11%2Fflex%E5%B8%83%E5%B1%80%E5%85%A8%E8%A7%A3%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它. 最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下. 在拜读了阮一峰的flex布局教程和HaoyCn有关flex属性的回答后整理成此文章，以便加深印象。 什么是flexFlexbox Layout，官方名为 CSS Flexible Box Layout Module, 意为”弹性布局”，是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写. 任何一个容器都可以指定为flex布局。 123.box &#123; display: flex;&#125; 行内元素也可以使用flex布局。 123.box &#123; display: inline-flex;&#125; flex的基本概念 1、采用flex布局的元素被称为flex容器（flex container），他的子元素即为flex元素（flex item）。2、flex容器中包含两个相互垂直的轴，即主轴（main axis）和副轴（cross axis)。3、flex元素沿主轴从主轴起点 (main start)到主轴终点 (main end)依次排布。4、如果flex容器包含多行flex元素，则flex行（flex lines）沿副轴从副轴起点（cross start）到副轴终点（cross end)依次排布。5、单个flex元素占据的主轴空间叫做主轴程度（main size），占据的副轴空间叫做副轴长度（cross size）。 flex的兼容性 flex属性用于flex容器的属性以下6个属性设置在容器上 属性 含义 flex-direction 主轴方向 flex-wrap 换行样式 flex-flow 前两个的简写形式 justify-content 主轴对齐方式 align-items 单行的副轴对齐方式 align-content 多行的副轴对齐方式 注意：flex容器的column-*属性会失效。flex容器无法拥有::first-line和 ::first-letter虚元素。 flex-direction属性flex-direction 属性决定主轴方向(即项目的排序方向)。 含义 主轴方向 可选值 row 、row-reverse 、 column 、 column-reverse 默认值 row row 主轴为水平方向，七点在左端。 row-reverse 主轴为水平方向，起点在右端。 column 主轴为垂直方向，起点在上沿。 column-reverse 主轴为垂直方向，起点在下沿。 123.box&#123; flex-direction: row | row-reverse | column | column-reverse;&#125; flex-wrap属性默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。 123.box&#123; flex-wrap: nowrap | wrap | wrap-reverse;&#125;]]></content>
+      <categories>
+        <category>技术类</category>
+      </categories>
+      <tags>
+        <tag>flex</tag>
+      </tags>
+  </entry>
+</search>
