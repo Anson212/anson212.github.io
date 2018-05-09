@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="flex," />
+  <meta name="keywords" content="Flex," />
 
 
 
@@ -101,33 +101,33 @@
 
 
 <meta name="description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
-<meta name="keywords" content="flex">
+<meta name="keywords" content="Flex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flex布局学习和总结">
-<meta property="og:url" content="http://lolint.com/2018/02/11/flex布局全解析/index.html">
+<meta property="og:url" content="http://lolint.com/2017/06/11/flex-conclusion/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
 <meta property="og:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
-<meta property="og:image" content="http://img0.ph.126.net/FW70OwNnrYMBFCG9uHyXBA==/6597802041402786807.png">
-<meta property="og:image" content="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg">
-<meta property="og:image" content="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png">
-<meta property="og:image" content="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png">
-<meta property="og:image" content="http://img2.ph.126.net/msCXJ8xngHoO_qRk1Qe1vw==/1276770494378291483.png">
-<meta property="og:image" content="http://img0.ph.126.net/xArHebPijcQhUlF1p-axcQ==/6632574096631904937.jpg">
-<meta property="og:image" content="http://img1.ph.126.net/c3Epuhm2R3_jeore0GVOBQ==/6632547708352838446.jpg">
-<meta property="og:image" content="http://img0.ph.126.net/sQ24jP_UbZTaX-4xnCSB9A==/885238801855412886.png">
-<meta property="og:image" content="http://img0.ph.126.net/UG2taKlwv4norCpweTgc2w==/1278177869261555991.png">
-<meta property="og:image" content="http://img0.ph.126.net/Hl4lEPCj1ks7KdPpdZCVHw==/850054429766521944.png">
-<meta property="og:image" content="http://img2.ph.126.net/kixMNontSObJoNzqot_3oA==/6632536713233255312.png">
-<meta property="og:image" content="http://img0.ph.126.net/U1EHHiGODW1wfZXMHqjDPA==/6632699440954604013.png">
-<meta property="og:image" content="http://img2.ph.126.net/GfJvmD9lAngUzjev9sM_vg==/6632090311515049040.png">
-<meta property="og:image" content="http://img0.ph.126.net/QgD16C2vA4DacimlfFqTeQ==/2094455301804297114.jpg">
-<meta property="og:updated_time" content="2018-03-10T11:24:05.871Z">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/TJ5dK.I8vDsyggZPUA3KKeW.9Iv6UItNN4T9lzlxZbc!/b/dDIBAAAAAAAA&bo=vAJwAQAAAAADB.0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/5ek2oUU.gjxRztjU0j5X*d2LZCgXzt04jttQzzd*VsI!/b/dGoBAAAAAAAA&bo=MwJNAQAAAAADB18!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/G84HD67aj2lhI0jMUTYgB8Imi*B4.pUsjXElpV8N5y4!/b/dEIBAAAAAAAA&bo=gwM9AQAAAAARB4w!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/EyO1jvBCWos**40Lo6AGuRoAk57JsAUreH4ecChAobk!/b/dAgBAAAAAAAA&bo=HAPLAAAAAAADB*Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/4B0ckpUN2C3bceSAS5Lyf9Eipik67QsEUuBemuipwhI!/b/dGoBAAAAAAAA&bo=HgMUAQAAAAADByo!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/xcDb9jVqmIE4gN6W9AARrZ8oEi.7bRIX9T4otNSLVYg!/b/dGgBAAAAAAAA&bo=vAKRAAAAAAADFx0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/6cmhRI.7CmLJ.SGKqdNE6B7ox.pp22jlgL3t*b4t4.s!/b/dDEBAAAAAAAA&bo=vAKxAAAAAAARFy8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/EOypuYFuwrLxPPX5k14fRQzwGIuj3mwVyGRjfb0XIyc!/b/dDABAAAAAAAA&bo=vAKxAAAAAAARFy8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/SCsGHMrmc9MPbypd3zrfiENoFXt1pO9vODX3k756pbw!/b/dGgBAAAAAAAA&bo=fQL7AgAAAAADF7Q!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/7.O5B0VjZxsD.wutcdWBFVF5jvjknKhtHORpSA0X1HY!/b/dGoBAAAAAAAA&bo=aQISAwAAAAADF0g!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/2VF5ddIOMVvFKB1kxNYNWX8Nob8LASObOIrumXXNN5w!/b/dGsBAAAAAAAA&bo=bAISAwAAAAADB10!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/09c0gpJsLeJug5TprDPoFOs81dSgn7SUvUu9CGyycaQ!/b/dGoBAAAAAAAA&bo=7wLgAQAAAAADFz4!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/1RJwr2gqSzAZ83htlaZdhht2K8Rh6LUYQolx8Voi8cU!/b/dGoBAAAAAAAA&bo=5wKGAQAAAAADB0A!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/Ypu8ClqWfLTa*OZStZU0Bc1jK9VgWgxEROC0kxoz1LE!/b/dDIBAAAAAAAA&bo=IgPTAAAAAAADB9A!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/lWzObpNt91MhsJwtEhhLYSNsaCS9opuZjcsAxz3xrdQ!/b/dDABAAAAAAAA&bo=vAKRAAAAAAARBx8!&rf=viewer_4">
+<meta property="og:updated_time" content="2018-05-09T13:36:40.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flex布局学习和总结">
 <meta name="twitter:description" content="前言很长一段时间, 我知道有flex这个布局方式, 但是始终没有去学它.   最近由于学习小程序，发现里面需要使用flex布局, 于是决定学习一下.">
-<meta name="twitter:image" content="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V13OAScX2cKODx/TJ5dK.I8vDsyggZPUA3KKeW.9Iv6UItNN4T9lzlxZbc!/b/dDIBAAAAAAAA&bo=vAJwAQAAAAADB.0!&rf=viewer_4">
 
 
 
@@ -157,7 +157,7 @@
 
 
 
-  <link rel="canonical" href="http://lolint.com/2018/02/11/flex布局全解析/"/>
+  <link rel="canonical" href="http://lolint.com/2017/06/11/flex-conclusion/"/>
 
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2018/02/11/flex布局全解析/">
+    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/06/11/flex-conclusion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lolint">
@@ -363,8 +363,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T21:55:56+08:00">
-                2018-02-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-11T21:55:56+08:00">
+                2017-06-11
               </time>
             
 
@@ -454,7 +454,7 @@
       
 
       
-        <p><img src="http://img0.ph.126.net/SrfrDWtKJcCA-vNEWTU-wA==/3082713944955235032.png" alt="image">  </p>
+        <p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/TJ5dK.I8vDsyggZPUA3KKeW.9Iv6UItNN4T9lzlxZbc!/b/dDIBAAAAAAAA&amp;bo=vAJwAQAAAAADB.0!&amp;rf=viewer_4" alt="image">  </p>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有<code>flex</code>这个布局方式, 但是始终没有去学它.  </p>
 <p>最近由于学习小程序，发现里面需要使用<code>flex</code>布局, 于是决定学习一下. </p>
 <a id="more"></a> 
@@ -464,9 +464,9 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>行内元素也可以使用<code>flex</code>布局。    </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   display: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="flex的基本概念"><a href="#flex的基本概念" class="headerlink" title="flex的基本概念"></a>flex的基本概念</h1><p><img src="http://img0.ph.126.net/FW70OwNnrYMBFCG9uHyXBA==/6597802041402786807.png" alt="image">     </p>
+<h1 id="flex的基本概念"><a href="#flex的基本概念" class="headerlink" title="flex的基本概念"></a>flex的基本概念</h1><p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/5ek2oUU.gjxRztjU0j5X*d2LZCgXzt04jttQzzd*VsI!/b/dGoBAAAAAAAA&amp;bo=MwJNAQAAAAADB18!&amp;rf=viewer_4" alt="image">     </p>
 <p>1、采用<code>flex</code>布局的元素被称为<code>flex</code><strong>容器</strong><code>（flex container）</code>，他的子元素即为<code>flex</code>元素<code>（flex item）</code>。<br>2、<code>flex</code>容器中包含两个相互垂直的轴，即<strong>主轴</strong>（main axis）和<strong>副轴</strong><code>（cross axis)</code>。<br>3、flex元素沿主轴从<strong>主轴起点</strong> <code>(main start)</code>到<strong>主轴终点 </strong><code>(main end)</code>依次排布。<br>4、如果<code>flex</code>容器包含多行<code>flex</code>元素，则<code>flex</code>行<code>（flex lines）</code>沿<strong>副轴</strong>从<strong>副轴起点</strong><code>（cross start）</code>到<strong>副轴</strong>终点<code>（cross end)</code>依次排布。<br>5、单个<code>flex</code>元素占据的主轴空间叫做<strong>主轴程度</strong><code>（main size）</code>，占据的副轴空间叫做<strong>副轴</strong>长度<code>（cross size）</code>。   </p>
-<h1 id="flex的兼容性"><a href="#flex的兼容性" class="headerlink" title="flex的兼容性"></a>flex的兼容性</h1><p><img src="http://img0.ph.126.net/Xo3CmTRormxS2Yxa7XqZHA==/6632188168049917746.jpg" alt="image"></p>
+<h1 id="flex的兼容性"><a href="#flex的兼容性" class="headerlink" title="flex的兼容性"></a>flex的兼容性</h1><p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/G84HD67aj2lhI0jMUTYgB8Imi*B4.pUsjXElpV8N5y4!/b/dEIBAAAAAAAA&amp;bo=gwM9AQAAAAARB4w!&amp;rf=viewer_4" alt="image"></p>
 <h1 id="flex属性"><a href="#flex属性" class="headerlink" title="flex属性"></a>flex属性</h1><h2 id="用于flex容器的属性"><a href="#用于flex容器的属性" class="headerlink" title="用于flex容器的属性"></a>用于flex容器的属性</h2><p>以下6个属性设置在容器上    </p>
 <table>
 <thead>
@@ -539,14 +539,14 @@
 </tbody>
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-direction: row  | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img1.ph.126.net/TusyFWd5qVj1yA5_hY515w==/6630620264468849002.png" alt="image"> </p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/EyO1jvBCWos**40Lo6AGuRoAk57JsAUreH4ecChAobk!/b/dAgBAAAAAAAA&amp;bo=HAPLAAAAAAADB*Y!&amp;rf=viewer_4" alt="image"> </p>
 <h2 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h2><p>默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行。</p>
-<p><img src="http://img0.ph.126.net/vpQWGZ9YILFxG1SnK_JuOg==/6631928683305760833.png" alt="image"> </p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/4B0ckpUN2C3bceSAS5Lyf9Eipik67QsEUuBemuipwhI!/b/dGoBAAAAAAAA&amp;bo=HgMUAQAAAAADByo!&amp;rf=viewer_4" alt="image"> </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-wrap: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>它可能取三个值    </p>
-<p>（1）<code>nowrap</code>（默认）：不换行。<br><img src="http://img2.ph.126.net/msCXJ8xngHoO_qRk1Qe1vw==/1276770494378291483.png" alt="image"> </p>
-<p>（2）<code>wrap</code>：换行，第一行在上方。<br><img src="http://img0.ph.126.net/xArHebPijcQhUlF1p-axcQ==/6632574096631904937.jpg" alt="image">  </p>
-<p>（3）<code>wrap-reverse</code>：换行，第一行在下方。<br> <img src="http://img1.ph.126.net/c3Epuhm2R3_jeore0GVOBQ==/6632547708352838446.jpg" alt="image"></p>
+<p>（1）<code>nowrap</code>（默认）：不换行。<br><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/xcDb9jVqmIE4gN6W9AARrZ8oEi.7bRIX9T4otNSLVYg!/b/dGgBAAAAAAAA&amp;bo=vAKRAAAAAAADFx0!&amp;rf=viewer_4" alt="image"> </p>
+<p>（2）<code>wrap</code>：换行，第一行在上方。<br><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/6cmhRI.7CmLJ.SGKqdNE6B7ox.pp22jlgL3t*b4t4.s!/b/dDEBAAAAAAAA&amp;bo=vAKxAAAAAAARFy8!&amp;rf=viewer_4" alt="image">  </p>
+<p>（3）<code>wrap-reverse</code>：换行，第一行在下方。<br> <img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/EOypuYFuwrLxPPX5k14fRQzwGIuj3mwVyGRjfb0XIyc!/b/dDABAAAAAAAA&amp;bo=vAKxAAAAAAARFy8!&amp;rf=viewer_4" alt="image"></p>
 <h2 id="flex-flow属性"><a href="#flex-flow属性" class="headerlink" title="flex-flow属性"></a>flex-flow属性</h2><p><code>flex-flow</code>属相是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为 <code>row nowrap</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">  flex-flow:&lt;flex-direction&gt;||&lt;flex-wrap&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="justify-content属性"><a href="#justify-content属性" class="headerlink" title="justify-content属性"></a>justify-content属性</h2><p>它可能取5个值，具体对齐方式与轴的方向有关，下面假设主轴为从左到右。    </p>
 <table>
@@ -580,7 +580,7 @@
 </tbody>
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">  justify-content: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img0.ph.126.net/sQ24jP_UbZTaX-4xnCSB9A==/885238801855412886.png" alt="image">  </p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/SCsGHMrmc9MPbypd3zrfiENoFXt1pO9vODX3k756pbw!/b/dGgBAAAAAAAA&amp;bo=fQL7AgAAAAADF7Q!&amp;rf=viewer_4" alt="image">  </p>
 <h2 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h2><p><code>align-items</code>属性定义项目在交叉轴上如何对齐。<br>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。   </p>
 <table>
 <thead>
@@ -613,7 +613,7 @@
 </tbody>
 </table>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">  align-items: flex-start  |  flex-end  |  center  |  baseline | stretch; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> <img src="http://img0.ph.126.net/UG2taKlwv4norCpweTgc2w==/1278177869261555991.png" alt="image">  </p>
+<p> <img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/7.O5B0VjZxsD.wutcdWBFVF5jvjknKhtHORpSA0X1HY!/b/dGoBAAAAAAAA&amp;bo=aQISAwAAAAADF0g!&amp;rf=viewer_4" alt="image">  </p>
 <h2 id="align-content属性"><a href="#align-content属性" class="headerlink" title="align-content属性"></a>align-content属性</h2><p><code>align-content</code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<br>该属性可能取6个值。</p>
 <table>
 <thead>
@@ -649,7 +649,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="http://img0.ph.126.net/Hl4lEPCj1ks7KdPpdZCVHw==/850054429766521944.png" alt="image"></p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/2VF5ddIOMVvFKB1kxNYNWX8Nob8LASObOIrumXXNN5w!/b/dGsBAAAAAAAA&amp;bo=bAISAwAAAAADB10!&amp;rf=viewer_4" alt="image"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">   align-content: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="用于flex元素的属性"><a href="#用于flex元素的属性" class="headerlink" title="用于flex元素的属性"></a>用于flex元素的属性</h1><p>这类属性有6种，分别为:</p>
 <table>
@@ -689,17 +689,17 @@
 <p><strong>注意：</strong><code>flex</code>元素的 <code>float</code>，<code>clear</code>和<code>vertical-align</code>会失效。</p>
 <h2 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h2><p><code>order</code>属性定义项目的排序顺序。数值越小，排列越靠前，默认为0.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   order:&lt;integer&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img2.ph.126.net/kixMNontSObJoNzqot_3oA==/6632536713233255312.png" alt="image"></p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/09c0gpJsLeJug5TprDPoFOs81dSgn7SUvUu9CGyycaQ!/b/dGoBAAAAAAAA&amp;bo=7wLgAQAAAAADFz4!&amp;rf=viewer_4" alt="image"></p>
 <h2 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h2><p><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   align-self:&#123; auto | flex-start | flex-end | center | baseline | stretch &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img0.ph.126.net/U1EHHiGODW1wfZXMHqjDPA==/6632699440954604013.png" alt="image"></p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/1RJwr2gqSzAZ83htlaZdhht2K8Rh6LUYQolx8Voi8cU!/b/dGoBAAAAAAAA&amp;bo=5wKGAQAAAAADB0A!&amp;rf=viewer_4" alt="image"></p>
 <h2 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h2><p><code>flex-grow</code>属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
 <p>如果所有项目的<code>flex-grow</code>属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的<code>flex-grow</code>属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-grow:&lt;number&gt;; /*default 0*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img2.ph.126.net/GfJvmD9lAngUzjev9sM_vg==/6632090311515049040.png" alt="image"></p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/Ypu8ClqWfLTa*OZStZU0Bc1jK9VgWgxEROC0kxoz1LE!/b/dDIBAAAAAAAA&amp;bo=IgPTAAAAAAADB9A!&amp;rf=viewer_4" alt="image"></p>
 <h2 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h2><p><code>flex-shrink</code>属性定义了项目的缩小比例，默认为1，即如果空间不足，盖项目将缩小。<br><code>flex-shrink</code>为 0 则表示，即使<code>flex</code>容器空间不足，该<code>flex</code>元素也不缩小。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">   flex-shrink:&lt;number&gt;; /* default 1 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img0.ph.126.net/QgD16C2vA4DacimlfFqTeQ==/2094455301804297114.jpg" alt="image"></p>
+<p><img src="http://m.qpic.cn/psb?/V13OAScX2cKODx/lWzObpNt91MhsJwtEhhLYSNsaCS9opuZjcsAxz3xrdQ!/b/dDABAAAAAAAA&amp;bo=vAKRAAAAAAARBx8!&amp;rf=viewer_4" alt="image"></p>
 <h2 id="flex-basis属性"><a href="#flex-basis属性" class="headerlink" title="flex-basis属性"></a>flex-basis属性</h2><table>
 <thead>
 <tr>
@@ -816,7 +816,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/flex/" rel="tag"><i class="fa fa-tag"></i> flex</a>
+            <a href="/tags/Flex/" rel="tag"><i class="fa fa-tag"></i> Flex</a>
           
         </div>
       
@@ -980,9 +980,7 @@
       
     </div>
     
-    <div id="music163player">
-          <iframe frameborder="no" border="340" marginwidth="300" marginheight="0" width=380 height=450 src="//music.163.com/outchain/player?type=0&id=2089083757&auto=0&height=430"></iframe>
-         </div>
+  
   </aside>
 
 
