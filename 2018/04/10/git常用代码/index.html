@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Lolint&#39;s">
 <meta property="og:description" content="创建版本库1$git init 添加到暂存区1$git add &amp;lt;file&amp;gt; 提交到仓库1$git commit -m &quot;your description&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-19T19:57:50.647Z">
+<meta property="og:updated_time" content="2019-07-25T09:15:03.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用代码">
 <meta name="twitter:description" content="创建版本库1$git init 添加到暂存区1$git add &amp;lt;file&amp;gt; 提交到仓库1$git commit -m &quot;your description&quot;">
@@ -464,11 +464,11 @@
 <p><strong>查看每一次提交记录，包括版本回退记录</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git reflog</span><br></pre></td></tr></table></figure>
 <h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><blockquote>
-<p>通过HEAD回退版本</p>
+<p>通过<code>HEAD</code>回退版本</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>HEAD 表示当前版本 HEAD^ 表示上1个版本 HEAD^ 表示上2个版本 HEAD~n 表示上n个版本</p>
+<p><code>HEAD</code> 表示当前版本<code>HEAD^</code>表示上1个版本 <code>HEAD^</code> 表示上2个版本 <code>HEAD~n</code> 表示上<code>n</code>个版本</p>
 <p>通过commit id回退版本</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git reset --hard <span class="number">3628164</span></span><br></pre></td></tr></table></figure>
@@ -477,12 +477,12 @@
 <h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:luosijie/Front-end-Blog.git</span><br></pre></td></tr></table></figure>
 <p><strong>或</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git remote add origin https:<span class="comment">//github.com/luosijie/Front-endBlog.git</span></span><br></pre></td></tr></table></figure>
-<p>添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。</p>
-<p>Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。 使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https   </p>
+<p>添加后，远程库的名字就是<code>origin</code>，这是<code>Git</code>默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库。</p>
+<p><code>Git</code>支持多种协议，默认的<code>git://</code>使用<code>ssh</code>，但也可以使用<code>https</code>等其他协议。 使用<code>https</code>除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放<code>http</code>端口的公司内部就无法使用<code>ssh</code>协议而只能用<code>https</code>   </p>
 <h3 id="查看远程库"><a href="#查看远程库" class="headerlink" title="查看远程库"></a>查看远程库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git remote</span><br></pre></td></tr></table></figure>
 <h3 id="删除远程库"><a href="#删除远程库" class="headerlink" title="删除远程库"></a>删除远程库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove &lt;name&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="推送内容到远程库"><a href="#推送内容到远程库" class="headerlink" title="推送内容到远程库"></a>推送内容到远程库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//origin 为远程库名称</span></span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-<p>第一次推送master分支时，由于远程库是空的，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>第一次推送<code>master</code>分支时，由于远程库是空的，加上了<code>-u</code>参数，<code>Git</code>不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
 <p>第二次开始就可以用</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
 <p>来源 <a href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440" target="_blank" rel="noopener">廖雪峰Git教程</a></p>
@@ -575,8 +575,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/21/Hexo博客添加访问量统计/" rel="prev" title="Hexo博客添加访问量统计">
-                Hexo博客添加访问量统计 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/13/微信小程序 授权登录流程/" rel="prev" title="微信小程序 授权登录流程">
+                微信小程序 授权登录流程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -663,7 +663,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -784,7 +784,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.0k字</span>
+  <span class="post-count">博客全站共19.0k字</span>
 </div>
         
 
