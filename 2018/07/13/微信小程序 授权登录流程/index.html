@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Lolint&#39;s">
 <meta property="og:description" content="前言 由于微信官方修改了 getUserInfo 接口，所以现在无法实现一进入微信小程序就弹出授权窗口，只能通过 button 去触发  实现思路 自定义一个微信授权登录页面，让用户通过button去触发getUserInof接口。在用户进入微信小程序时，判断用户是否授权，如果没有授权就显示授权页面，让用户去执行授权操作。如果授权了，则直接跳过，进入首页。  小程序登录流程第一步 获取当前微信用户">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T09:35:31.531Z">
+<meta property="og:updated_time" content="2019-07-25T09:39:16.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序 授权登录流程">
 <meta name="twitter:description" content="前言 由于微信官方修改了 getUserInfo 接口，所以现在无法实现一进入微信小程序就弹出授权窗口，只能通过 button 去触发  实现思路 自定义一个微信授权登录页面，让用户通过button去触发getUserInof接口。在用户进入微信小程序时，判断用户是否授权，如果没有授权就显示授权页面，让用户去执行授权操作。如果授权了，则直接跳过，进入首页。  小程序登录流程第一步 获取当前微信用户">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  992
+                  991
                 </span>
               
 
@@ -458,9 +458,10 @@
 <h1 id="小程序登录流程"><a href="#小程序登录流程" class="headerlink" title="小程序登录流程"></a>小程序登录流程</h1><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><ul>
 <li>获取当前微信用户的登录凭证（<code>code</code>）</li>
 <li>可通过<code>wx.login</code> <code>api</code>获得</li>
-<li><code>wx.login</code>换取的<code>code</code>只能使用一次，如果需要新的<code>code</code>只能重新调用<code>wx.login</code>接口</li>
-</ul>
+<li><code>wx.login</code>换取的<code>code</code>只能使用一次，如果需要新的<code>code</code>只能重新调用<code>wx.login</code>接口<a id="more"></a> 
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wx.login(&#123;</span><br><span class="line">    success:<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> code= res.code</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>通过<code>wx.login</code>获得临时登录凭证传给服务器获得<code>openID</code>和<code>session_key</code>,服务器需要通过<code>appid</code>和<code>appsecret</code>（这两个是从小程序后台获得）、<code>code</code>（从<code>wx.login</code>中获取到）向微信服务器发送请求获取<code>session_ke</code>y和<code>openID</code>。确保安全，建议将获得的<code>session_key</code>加密再传给客户端。</p>
 <h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>客户端获得加密后的登录态后把登录态存在本地以便后面进行业务请求。由于小程序中不存在<code>cookie</code>机制。所以可以把登录态存储在<code>storage</code>中。</p>
 <h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><h2 id="index-wxml"><a href="#index-wxml" class="headerlink" title="index.wxml"></a>index.wxml</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;isHide&#125;&#125;"</span>&gt;</span><br><span class="line">    &lt;view wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;canIUse&#125;&#125;"</span> &gt;</span><br><span class="line">        &lt;view <span class="class"><span class="keyword">class</span></span>=<span class="string">'header'</span>&gt;</span><br><span class="line">            &lt;image src=<span class="string">'/images/wx_login.png'</span>&gt;&lt;/image&gt;</span><br><span class="line">        &lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">        &lt;view class='content'&gt;</span></span><br><span class="line"><span class="regexp">         &lt;view&gt;申请获取以下权限&lt;/</span>view&gt;</span><br><span class="line">          &lt;text&gt;获得你的公开信息(昵称，头像等)&lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>view&gt;</span><br><span class="line">        &lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">'bottom'</span> type=<span class="string">'primary'</span> open-type=<span class="string">"getUserInfo"</span> lang=<span class="string">"zh_CN"</span> bindgetuserinfo=<span class="string">"bindGetUserInfo"</span>&gt;</span><br><span class="line">            授权登录</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>view&gt;</span><br><span class="line">    &lt;view wx:<span class="keyword">else</span>&gt;请升级微信版本&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>view&gt;</span><br><span class="line">&lt;view wx:<span class="keyword">else</span>&gt;</span><br><span class="line">    &lt;view&gt;首页内容&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>view&gt;</span><br></pre></td></tr></table></figure>
