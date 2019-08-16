@@ -100,23 +100,23 @@
 
 
 
-<meta name="description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
+<meta name="description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想：  如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue组件化开发学习(一)">
 <meta property="og:url" content="http://lolint.com/2019/07/14/vue/vue组件化开发学习(一)/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
-<meta property="og:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
+<meta property="og:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想：  如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-component.png?raw=true">
 <meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-extend.png?raw=true">
 <meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/props.png?raw=true">
 <meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/props-type.png?raw=true">
 <meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/childCpn.png?raw=true">
-<meta property="og:updated_time" content="2019-08-16T13:01:23.286Z">
+<meta property="og:updated_time" content="2019-08-16T13:03:04.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue组件化开发学习(一)">
-<meta name="twitter:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
+<meta name="twitter:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想：  如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变">
 <meta name="twitter:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-component.png?raw=true">
 
 
@@ -463,14 +463,15 @@
 <li>将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。</li>
 </ul>
 </li>
-<li>组件化也是类似的思想：<ul>
+<li><p>组件化也是类似的思想：</p>
+<ul>
 <li>如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得非常复杂，而且不利于后续的管理以及扩展。</li>
-<li>但如果我们把一个页面拆分成一个个小的功能块，那每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就会变得非常容易了。</li>
+<li>但如果我们把一个页面拆分成一个个小的功能块，那每个功能块完成属于自己这部分独立的功能，那么之后整个页面的管理和维护就会变得非常容易了。<a id="more"></a>
+<h1 id="Vue组件化思想"><a href="#Vue组件化思想" class="headerlink" title="Vue组件化思想"></a>Vue组件化思想</h1></li>
 </ul>
 </li>
-</ul>
-<h1 id="Vue组件化思想"><a href="#Vue组件化思想" class="headerlink" title="Vue组件化思想"></a>Vue组件化思想</h1><ul>
-<li>组件化是<code>vue.js</code>中的重要思想<ul>
+<li><p>组件化是<code>vue.js</code>中的重要思想</p>
+<ul>
 <li>它提供了一种抽象，可以让我们开发出一个个独立可复用的小组件来构造我们的应用。</li>
 <li>任何的应用都会抽象成一颗组件树。</li>
 </ul>
