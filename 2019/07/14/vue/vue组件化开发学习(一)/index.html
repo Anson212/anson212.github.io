@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -100,16 +100,24 @@
 
 
 
-<meta name="description" content="行至水穷处,坐看云起时">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lolint&#39;s">
-<meta property="og:url" content="http://lolint.com/index.html">
+<meta name="description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue组件化开发学习(一)">
+<meta property="og:url" content="http://lolint.com/2019/07/14/vue/vue组件化开发学习(一)/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
-<meta property="og:description" content="行至水穷处,坐看云起时">
+<meta property="og:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-component.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-extend.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/props.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/props-type.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/childCpn.png?raw=true">
+<meta property="og:updated_time" content="2019-08-16T13:01:23.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lolint&#39;s">
-<meta name="twitter:description" content="行至水穷处,坐看云起时">
+<meta name="twitter:title" content="vue组件化开发学习(一)">
+<meta name="twitter:description" content="什么是组件化 人面对复杂问题的处理方式： 任何一个人处理信息的逻辑能力都是有限的 所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。 但是，我们人有一种天生的能力，就是将问题进行拆解。 将一个复杂的问题，拆分成很多个可以处理的小问题，再讲其放在整体当中，你就会发现大的问题也会迎刃而解。   组件化也是类似的思想： 如果我们将一个野蛮中所有的处理逻辑全部放在一起，处理起来就会变得">
+<meta name="twitter:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-component.png?raw=true">
 
 
 
@@ -139,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://lolint.com/"/>
+  <link rel="canonical" href="http://lolint.com/2019/07/14/vue/vue组件化开发学习(一)/"/>
 
 
 
 
 
-  <title>Lolint's</title>
+  <title>vue组件化开发学习(一) | Lolint's</title>
   
 
 
@@ -164,8 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,9 +309,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -334,9 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/14/vue/vue组件化开发学习(一)/" itemprop="url">vue组件化开发学习(一)</a></h1>
+          <h1 class="post-title" itemprop="name headline">vue组件化开发学习(一)</h1>
         
 
         <div class="post-meta">
@@ -391,7 +396,7 @@
               </span>
               
                 <a href="/2019/07/14/vue/vue组件化开发学习(一)/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2019/07/14/vue/vue组件化开发学习(一)/" class="cy_cmt_count" data-xid="2019/07/14/vue/vue组件化开发学习(一)/" itemprop="commentsCount" ></span>
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/07/14/vue/vue组件化开发学习(一)/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -450,9 +455,7 @@
       
 
       
-        
-          
-            <h1 id="什么是组件化"><a href="#什么是组件化" class="headerlink" title="什么是组件化"></a>什么是组件化</h1><ul>
+        <h1 id="什么是组件化"><a href="#什么是组件化" class="headerlink" title="什么是组件化"></a>什么是组件化</h1><ul>
 <li>人面对复杂问题的处理方式：<ul>
 <li>任何一个人处理信息的逻辑能力都是有限的</li>
 <li>所以，当面对一个非常复杂的问题时，我们不太可能一次性搞定一大堆的内容。</li>
@@ -647,8 +650,6 @@
 <p>==总结：==</p>
 <p>以上所述的是vue中组件化的理解，希望对大家有所帮助！！！</p>
 
-          
-        
       
     </div>
     
@@ -664,427 +665,84 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="Lolint 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
     
     <div>
   
+    
+ <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-star"></i>感谢您的阅读-------------</div>
+<br/>
+<div style="border: 1px solid black">
+<div style="margin-left:10px">
+<span style="font-weight:blod">版权声明</span>
+<img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020242973cc.png" >
+<br/>
+<p style="font-size: 10px;line-height: 30px"><a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> by <a href="http://lolint.com" style="color:#258FC6">Lolint</a> is licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">Creative Commons BY-NC-ND 4.0 International License</a>.<br/>
+由<a href="http://lolint.com" style="color:#258FC6">Lolint</a>创作并维护的<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a>博客采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。<br/>
+本文首发于<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> 博客（ <a href="http://lolint.com" style="color:#258FC6">http://lolint.com</a> ），版权所有，侵权必究。</p>
+</div>
+</div>
+
+  
 </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2019/07/13/vue/vue中的v-model的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/13/vue/vue中的v-model的使用/" itemprop="url">vue中v-model的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T20:27:53+08:00">
-                2019-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/07/13/vue/vue中的v-model的使用/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2019/07/13/vue/vue中的v-model的使用/" class="cy_cmt_count" data-xid="2019/07/13/vue/vue中的v-model的使用/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,490
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="vue中的v-mdoel的应用"><a href="#vue中的v-mdoel的应用" class="headerlink" title="vue中的v-mdoel的应用"></a>vue中的v-mdoel的应用</h1><blockquote>
-<p><code>v-model</code>用于表单数据的双向绑定，其实它就是一个语法糖。</p>
-</blockquote>
-<p>vue中经常使用到表单绑定例如：<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>、<code>&lt;radio&gt;</code>、<code>&lt;checkbox&gt;</code>这类表单元素，<code>vue</code>对于这些元素的数据绑定跟我们以前经常使用的<code>jquery</code>有些区别。<code>vue</code>使用<code>v-model</code>实现这些标签的双向绑定，会根据控件类型自动选取正确的方法来更新元素。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/07/13/vue/vue中的v-model的使用/" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/13/vue/vue中的v-model的使用/" rel="next" title="vue中v-model的使用">
+                <i class="fa fa-chevron-left"></i> vue中v-model的使用
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
 
-     
-    
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2019/05/21/hexo/Hexo博客添加访问量统计/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/21/hexo/Hexo博客添加访问量统计/" itemprop="url">Hexo博客添加访问量统计</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-21T21:55:56+08:00">
-                2019-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2019/05/21/hexo/Hexo博客添加访问量统计/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2019/05/21/hexo/Hexo博客添加访问量统计/" class="cy_cmt_count" data-xid="2019/05/21/hexo/Hexo博客添加访问量统计/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  363
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="前导必备"><a href="#前导必备" class="headerlink" title="前导必备"></a>前导必备</h1><ul>
-<li><a href="http://www.lolint.com/" target="_blank" rel="noopener">博主博客地址</a></li>
-<li>博主使用的是<code>next</code>主题</li>
-<li>访问量统计使用<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a></li>
-</ul>
-<h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>比较早的时候使用next主题，想要开启站点统计功能（访客、总访问量），只需要找到<code>_config.yml</code>配置文件，把<code>busuanzi_count</code>的<code>enable</code>设置为<code>true</code>即可。但是近期，大概是2018年10月份左右，这个不蒜子的统计功能就失效了。查阅了<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子官方</a>的说法。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/21/hexo/Hexo博客添加访问量统计/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1094,1433 +752,27 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2018/07/13/小程序/微信小程序 授权登录流程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/13/小程序/微信小程序 授权登录流程/" itemprop="url">微信小程序 授权登录流程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T20:27:53+08:00">
-                2018-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小程序/" itemprop="url" rel="index">
-                    <span itemprop="name">小程序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/07/13/小程序/微信小程序 授权登录流程/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2018/07/13/小程序/微信小程序 授权登录流程/" class="cy_cmt_count" data-xid="2018/07/13/小程序/微信小程序 授权登录流程/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  992
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
-<li>由于微信官方修改了 <code>getUserInfo</code> 接口，所以现在无法实现一进入微信小程序就弹出授权窗口，只能通过 <code>button</code> 去触发</li>
-</ul>
-<h1 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h1><ul>
-<li>自定义一个微信授权登录页面，让用户通过<code>button</code>去触发<code>getUserInof</code>接口。在用户进入微信小程序时，判断用户是否授权，如果没有授权就显示授权页面，让用户去执行授权操作。如果授权了，则直接跳过，进入首页。</li>
-</ul>
-<h1 id="小程序登录流程"><a href="#小程序登录流程" class="headerlink" title="小程序登录流程"></a>小程序登录流程</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/13/小程序/微信小程序 授权登录流程/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2018/04/10/git/git常用代码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/10/git/git常用代码/" itemprop="url">git常用代码</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-10T20:27:53+08:00">
-                2018-04-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/04/10/git/git常用代码/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2018/04/10/git/git常用代码/" class="cy_cmt_count" data-xid="2018/04/10/git/git常用代码/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  483
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git init</span><br></pre></td></tr></table></figure>
-<h3 id="添加到暂存区"><a href="#添加到暂存区" class="headerlink" title="添加到暂存区"></a>添加到暂存区</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git add &lt;file&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git commit -m <span class="string">"your description"</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/10/git/git常用代码/" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
     </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
-  
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/07/21/Ajax/Ajax入门和发送http请求/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/21/Ajax/Ajax入门和发送http请求/" itemprop="url">Ajax入门和发送http请求</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T21:55:56+08:00">
-                2017-07-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ajax/" itemprop="url" rel="index">
-                    <span itemprop="name">ajax</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2017/07/21/Ajax/Ajax入门和发送http请求/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2017/07/21/Ajax/Ajax入门和发送http请求/" class="cy_cmt_count" data-xid="2017/07/21/Ajax/Ajax入门和发送http请求/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,129
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  9
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h1><h3 id="同步和异步的概念"><a href="#同步和异步的概念" class="headerlink" title="同步和异步的概念"></a>同步和异步的概念</h3><ul>
-<li>同步：必须等待前面的任务完成，才能继续后面的任务。</li>
-<li>异步：不受当前任务的影响</li>
-</ul>
-<p>拿排队举例</p>
-<ul>
-<li>同步：在银行排队时，只有等到你了，才能够去处理业务。</li>
-<li>异步：在排队的时候，可以玩手机。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/21/Ajax/Ajax入门和发送http请求/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/07/11/Ajax/同源和跨域/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/11/Ajax/同源和跨域/" itemprop="url">同源和跨域</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T21:55:56+08:00">
-                2017-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ajax/" itemprop="url" rel="index">
-                    <span itemprop="name">ajax</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2017/07/11/Ajax/同源和跨域/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2017/07/11/Ajax/同源和跨域/" class="cy_cmt_count" data-xid="2017/07/11/Ajax/同源和跨域/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,516
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知浏览器的同源策略及跨域的方法在前端面试中也是出场率极高的问题，本文主要跟大家分享了关于前端面试时会遇到的同源和跨域问题，下面话不多说了，来一起看看详细的介绍吧。</p>
-<h2 id="什么是同源策略"><a href="#什么是同源策略" class="headerlink" title="什么是同源策略"></a>什么是同源策略</h2><h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><p>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/11/Ajax/同源和跨域/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/" itemprop="url">微信小程序通过api接口将json数据展现到小程序示例</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T20:27:53+08:00">
-                2017-07-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小程序/" itemprop="url" rel="index">
-                    <span itemprop="name">小程序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/" class="cy_cmt_count" data-xid="2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  582
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="用到的知识"><a href="#用到的知识" class="headerlink" title="用到的知识"></a>用到的知识</h1><ol>
-<li><code>wx.request</code> 请求接口资源(微信小程序api的发起请求部分)</li>
-<li><code>swiper</code>实现轮播图的组件</li>
-<li><code>wx:for</code> 循环语句</li>
-<li>微信小程序的基础知识</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/06/11/flex/flex-conclusion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/11/flex/flex-conclusion/" itemprop="url">flex布局学习和总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-11T21:55:56+08:00">
-                2017-06-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Flex/" itemprop="url" rel="index">
-                    <span itemprop="name">Flex</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2017/06/11/flex/flex-conclusion/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2017/06/11/flex/flex-conclusion/" class="cy_cmt_count" data-xid="2017/06/11/flex/flex-conclusion/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,822
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/flexbox.jpg?raw=true" alt="image">  </p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很长一段时间, 我知道有<code>flex</code>这个布局方式, 但是始终没有去学它.  </p>
-<p>最近由于学习小程序，发现里面需要使用<code>flex</code>布局, 于是决定学习一下. </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/06/11/flex/flex-conclusion/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/05/11/css/CSS-layout/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lolint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lolint's">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/11/css/CSS-layout/" itemprop="url">CSS常见的几种布局</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T11:55:56+08:00">
-                2017-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2017/05/11/css/CSS-layout/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://lolint.com/2017/05/11/css/CSS-layout/" class="cy_cmt_count" data-xid="2017/05/11/css/CSS-layout/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,178
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="单列布局"><a href="#单列布局" class="headerlink" title="单列布局"></a>单列布局</h1><p>常见的单列布局有两种方法：  </p>
-<ul>
-<li><code>header</code>，<code>content</code>，<code>footer</code>等宽的单列布局 </li>
-<li><code>header</code>与<code>footer</code>等宽，<code>content</code> 略窄的单列布局
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/11/css/CSS-layout/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    
-   <div>
-      
- </div>
-
-     
-    
-    
-
-    
-
-    
-    
-    <div>
-  
-</div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -2541,8 +793,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2617,6 +878,22 @@
          
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是组件化"><span class="nav-number">1.</span> <span class="nav-text">什么是组件化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue组件化思想"><span class="nav-number">2.</span> <span class="nav-text">Vue组件化思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注册成组件的基本步骤"><span class="nav-number">3.</span> <span class="nav-text">注册成组件的基本步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件步骤解析"><span class="nav-number">3.1.</span> <span class="nav-text">组件步骤解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局组件和局部组件"><span class="nav-number">4.</span> <span class="nav-text">全局组件和局部组件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注册组件语法糖"><span class="nav-number">5.</span> <span class="nav-text">注册组件语法糖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件数据的存放"><span class="nav-number">6.</span> <span class="nav-text">组件数据的存放</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#父子组件的通讯"><span class="nav-number">7.</span> <span class="nav-text">父子组件的通讯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#props基本用法"><span class="nav-number">8.</span> <span class="nav-text">props基本用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#props数据验证"><span class="nav-number">9.</span> <span class="nav-text">props数据验证</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#父级向子级传递"><span class="nav-number">10.</span> <span class="nav-text">父级向子级传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子级向父级传递"><span class="nav-number">11.</span> <span class="nav-text">子级向父级传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#父子组件的访问方式-refs"><span class="nav-number">12.</span> <span class="nav-text">父子组件的访问方式:$refs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#refs的使用："><span class="nav-number">12.1.</span> <span class="nav-text">$refs的使用：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#非父子组件通讯"><span class="nav-number">13.</span> <span class="nav-text">非父子组件通讯</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -2778,6 +1055,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -2812,7 +1093,18 @@
 
 
   
-    <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytvpOB5X"></script>
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytvpOB5X';
+      var conf = '9abdc24e8ae17f397f6a8e0bd11c4319';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
   
 
 
