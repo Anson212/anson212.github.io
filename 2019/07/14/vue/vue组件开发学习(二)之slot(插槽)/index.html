@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Ajax," />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -100,21 +100,22 @@
 
 
 
-<meta name="description" content="前言众所周知浏览器的同源策略及跨域的方法在前端面试中也是出场率极高的问题，本文主要跟大家分享了关于前端面试时会遇到的同源和跨域问题，下面话不多说了，来一起看看详细的介绍吧。 什么是同源策略同源同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。">
-<meta name="keywords" content="Ajax">
+<meta name="description" content="vue中的slot(插槽)个人理解：是对组件的扩展，通过slot插槽向组件内部指定位置传递内容，通过slot可以父子传参；slot的通俗理解是“占坑”，在组件模板中占好了位置，当使用该组件标签时候，组件标签里面的内容就会自动填坑(替换组件模板中&amp;lt;slot&amp;gt;位置)，当插槽也就是坑&amp;lt;slot name=”mySlot”&amp;gt;有命名时，组件标签中使用属性slot=”mySlot”的元">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="同源和跨域">
-<meta property="og:url" content="http://lolint.com/2017/07/11/Ajax/同源和跨域/index.html">
+<meta property="og:title" content="Vue组件开发学习(二)之slot(插槽)">
+<meta property="og:url" content="http://lolint.com/2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
-<meta property="og:description" content="前言众所周知浏览器的同源策略及跨域的方法在前端面试中也是出场率极高的问题，本文主要跟大家分享了关于前端面试时会遇到的同源和跨域问题，下面话不多说了，来一起看看详细的介绍吧。 什么是同源策略同源同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。">
+<meta property="og:description" content="vue中的slot(插槽)个人理解：是对组件的扩展，通过slot插槽向组件内部指定位置传递内容，通过slot可以父子传参；slot的通俗理解是“占坑”，在组件模板中占好了位置，当使用该组件标签时候，组件标签里面的内容就会自动填坑(替换组件模板中&amp;lt;slot&amp;gt;位置)，当插槽也就是坑&amp;lt;slot name=”mySlot”&amp;gt;有命名时，组件标签中使用属性slot=”mySlot”的元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/domain.jpg?raw=true">
-<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue-cli1.jpg?raw=true">
-<meta property="og:updated_time" content="2019-08-16T13:26:31.756Z">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/slot.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/slot01.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/slot02.png?raw=true">
+<meta property="og:updated_time" content="2019-08-18T07:58:51.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="同源和跨域">
-<meta name="twitter:description" content="前言众所周知浏览器的同源策略及跨域的方法在前端面试中也是出场率极高的问题，本文主要跟大家分享了关于前端面试时会遇到的同源和跨域问题，下面话不多说了，来一起看看详细的介绍吧。 什么是同源策略同源同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。">
-<meta name="twitter:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/domain.jpg?raw=true">
+<meta name="twitter:title" content="Vue组件开发学习(二)之slot(插槽)">
+<meta name="twitter:description" content="vue中的slot(插槽)个人理解：是对组件的扩展，通过slot插槽向组件内部指定位置传递内容，通过slot可以父子传参；slot的通俗理解是“占坑”，在组件模板中占好了位置，当使用该组件标签时候，组件标签里面的内容就会自动填坑(替换组件模板中&amp;lt;slot&amp;gt;位置)，当插槽也就是坑&amp;lt;slot name=”mySlot”&amp;gt;有命名时，组件标签中使用属性slot=”mySlot”的元">
+<meta name="twitter:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/slot.png?raw=true">
 
 
 
@@ -144,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://lolint.com/2017/07/11/Ajax/同源和跨域/"/>
+  <link rel="canonical" href="http://lolint.com/2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/"/>
 
 
 
 
 
-  <title>同源和跨域 | Lolint's</title>
+  <title>Vue组件开发学习(二)之slot(插槽) | Lolint's</title>
   
 
 
@@ -321,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lolint.com/2017/07/11/Ajax/同源和跨域/">
+    <link itemprop="mainEntityOfPage" href="http://lolint.com/2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lolint">
@@ -338,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">同源和跨域</h1>
+          <h1 class="post-title" itemprop="name headline">Vue组件开发学习(二)之slot(插槽)</h1>
         
 
         <div class="post-meta">
@@ -350,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T21:55:56+08:00">
-                2017-07-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-14T21:27:53+08:00">
+                2019-07-14
               </time>
             
 
@@ -373,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ajax/" itemprop="url" rel="index">
-                    <span itemprop="name">ajax</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -392,8 +393,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/07/11/Ajax/同源和跨域/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/11/Ajax/同源和跨域/" itemprop="commentsCount"></span>
+                <a href="/2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -415,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,516
+                  1,777
                 </span>
               
 
@@ -431,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -452,35 +453,123 @@
       
 
       
-        <p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/domain.jpg?raw=true" alt="image"></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>众所周知浏览器的同源策略及跨域的方法在前端面试中也是出场率极高的问题，本文主要跟大家分享了关于前端面试时会遇到的同源和跨域问题，下面话不多说了，来一起看看详细的介绍吧。</p>
-<h2 id="什么是同源策略"><a href="#什么是同源策略" class="headerlink" title="什么是同源策略"></a>什么是同源策略</h2><h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><p>同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。<br><a id="more"></a> </p>
-<h2 id="跨域问题的解决方案"><a href="#跨域问题的解决方案" class="headerlink" title="跨域问题的解决方案"></a>跨域问题的解决方案</h2><ol>
-<li>JSONP:script 标签的 src 属性传递数据。</li>
-<li>iframe 元素会创建包含另外一个文档的内联框架（即行内框架）  </li>
-<li>代理：如vue-cli项目中的config/index.js文件中的proxyTable设置所要跨域访问的地址</li>
-</ol>
-<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p><code>JSONP(JSON with Padding)</code>：带补丁的 <code>json</code>，本质是利用了 <code>&lt;script src=&quot;&quot;&gt;&lt;/script&gt;</code>标签具有可跨域的特性，由服务端返回一个预先定义好的JS函数的调用，并且将服务器数据以该函数参数的形式传递过来。此方法需要前后端配合完成。<br><code>html</code>标签的 <code>src</code> 属性是支持跨域的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"http://www.lolint.com/images/avatar.jpg"</span> alt=<span class="string">""</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>jsonp</code> 就是利用这个特性实现的跨域，但用的是 <code>script</code> 标签。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- <span class="string">`jsonp`</span> 就是 利用<span class="string">`src`</span>，实现的跨域 用的是 <span class="string">`script`</span>标签 --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>  src=<span class="string">'http://192.168.141.137/2018-02-28/myData.php'</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>上方那一行的代码，意思是：刷新<code>A</code>服务器上的<code>index</code>页面后，会去请求 <code>B</code> 服务器上的 <code>myData.php</code> 这个页面。而且请求的方式是 <code>get</code> 请求。<br>但是 <code>B</code> 服务器上的页面不是你想请求就可以请求的，大家一起配合才可以。<br><strong>具体实现步骤：</strong><br>需要首先声明的是，<code>jsonp</code> 只能通过 <code>GET</code> 方式进行请求。<br>（1）<code>A</code>客户端的代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">	&lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 定义 eatFood()方法</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'我被调用了哦'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(data);</span><br><span class="line">	&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;!-- 使用 `script`标签 发送了 `get`请求 去到了一个 `php`页面 --&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src='http://192.168.141.137/01.php?callback1=fn'&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>我们来分析上方代码中的最后一行的那个<code>url：A</code>客户端请求的是 <code>B</code>服务器上的 <code>01.php</code>页面。<code>url</code>里有个<code>callback1=fn</code>，意思是：<code>callback1</code>是<code>A</code>和<code>B</code> 之间的约定，约定后，将执行方法 <code>fn</code>。</p>
-<p>其实，<code>fn</code>方法已经在最后一行代码中执行了。只不过，<code>fn</code>方法里的<code>data</code>数据，是从 <code>B</code> 服务器中获取的。<br>（2）<code>B</code>服务器端的代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $mycallBack = $_GET[<span class="string">'callback1'</span>];</span><br><span class="line"></span><br><span class="line">	$arr = array(<span class="string">"zhangsan"</span>,<span class="string">"lisi"</span>,<span class="string">"zhaoliu"</span>);</span><br><span class="line"></span><br><span class="line">    echo $mycallBack.<span class="string">`(`</span>.json_encode($arr).<span class="string">`)`</span>;    <span class="comment">//字符串拼接</span></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>代码解释：</strong><br>第一行的<code>callback1</code> 是<code>A</code>和<code>B</code>之间的约定，二者必须一致。</p>
-<p><code>echo</code>语句中输出的内容，即使要返回给<code>A</code>客户端的内容，此内容会保存在 <code>A</code>客户端的<code>fn</code>方法的<code>data</code>里。 <code>data[0]</code>指的是 <code>zhangsan</code>。<br><code>json_encode</code>指的是，将php对象转化为 <code>json</code>。<br>刷新A页面，输出结果为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mycallBack([<span class="string">"zhangsan"</span>,<span class="string">"lisi"</span>,<span class="string">"zhaoliu"</span>])</span><br></pre></td></tr></table></figure></p>
-<h2 id="配置proxyTable解决跨域问题"><a href="#配置proxyTable解决跨域问题" class="headerlink" title="配置proxyTable解决跨域问题"></a>配置proxyTable解决跨域问题</h2><p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/vue-cli1.jpg?raw=true" alt="image"></p>
-<p>我们使用<code>vue-cli</code>生成的项目目录里，<code>config</code>下面的<code>index.js</code>有个<code>proxyTable</code>属性</p>
-<p>然后我们做如下设置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">   <span class="comment">// 这里可以理解为使用"/api" 代替 "target" 里的地址，</span></span><br><span class="line">  <span class="comment">// 比如说我们要调用的地址是 http://www.example.com/api/list,   则写成 /api/list 就可以了</span></span><br><span class="line">   <span class="string">'/api'</span>: &#123;</span><br><span class="line">     target: <span class="string">'http://www.example.com'</span>,  <span class="comment">// 你请求的api地址</span></span><br><span class="line">     secure: <span class="literal">false</span>,                    <span class="comment">// 如果是https接口，需要配置这个参数</span></span><br><span class="line">     changeOrigin: <span class="literal">true</span>        <span class="comment">//这个参数是用来回避跨站问题的，配置完之后发请求时会自动修改http header里面的host</span></span><br><span class="line">   &#125;</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure></p>
-<p>注意以上配置只在开发环境起作用<br><code>webpack-dev-server</code>更加详细的配置: <a href="https://webpack.js.org/configuration/dev-server/#devserver-proxy" target="_blank" rel="noopener">https://webpack.js.org/configuration/dev-server/#devserver-proxy</a></p>
-<p><strong>那么为什么我们设置这个proxyTable可以帮我们解决跨域问题呢？</strong></p>
-<p>其实<code>vue-cli</code>里的这个设置来自于其集成的插件 <code>http-proxy-middleware</code></p>
-<p><code>github</code>: <a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="noopener">https://github.com/chimurai/http-proxy-middleware</a></p>
-<p>这个插件可以帮我们在本地虚拟一个服务器接收请求并代替你发送该请求，因为是在服务端替我们发请求所以就没有我们烦恼的跨域问题了，当然这只适用于开发环境。  </p>
-<p><strong>项目上线怎么办？</strong></p>
-<p>我们通过配置<code>proxyTable</code>解决了本地开发环境请求接口跨域的问题，但是我们项目上线还是要替换成线上的接口地址的。如果我们的前端项目合后端服务不在同一个域名下，我们可以使用目前比较流行的 <code>CORS</code> 来处理跨域。这里就不展开讲了。   </p>
-<p>我们可以利用<code>webpack</code>配置的环境变量来实现开发环境和打包后的<code>api</code>区分<br>假设我们使用<code>axios</code>进行请求发送</p>
-<p>我们可以做如下配置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  timeout: <span class="number">60000</span>，</span><br><span class="line">  withCredentials: <span class="literal">true</span>        <span class="comment">// 访问线上api时axios发送跨域请求时需要设置这个参数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(process.env.NODE_ENV === <span class="string">'development'</span>) &#123;</span><br><span class="line">  <span class="comment">// 开发环境</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(process.env.NODE_ENV === <span class="string">'production'</span>) &#123;</span><br><span class="line">  <span class="comment">// 生产环境</span></span><br><span class="line">  config.baseURL = <span class="string">"http://www.baidu.com"</span>;   <span class="comment">//这里是线上api请求地址</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = axios.create(config);</span><br></pre></td></tr></table></figure></p>
-<p>这样配置后我们开发环境中就可以使用<code>proxyTable</code>代理请求，项目打包后请求地址就会被替换成线上的<code>api</code>地址。<br>假设我们开发环境请求的<code>api</code>地址为 <a href="http://www.example.com/api/list" target="_blank" rel="noopener">http://www.example.com/api/list</a><br>线上环境请求的<code>api</code>地址为 <a href="http://www.baidu.com/api/list" target="_blank" rel="noopener">http://www.baidu.com/api/list</a><br>那么我们发请求的时候只需要这么写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.get(<span class="string">"/api/list"</span>).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>项目打包后，<code>webpack</code>就可以自动帮我们把请求地址替换成线上的地址了。</p>
+        <h1 id="vue中的slot-插槽"><a href="#vue中的slot-插槽" class="headerlink" title="vue中的slot(插槽)"></a>vue中的slot(插槽)</h1><p><strong>个人理解：</strong><br>是对组件的扩展，通过<code>slot</code>插槽向组件内部指定位置传递内容，通过<code>slot</code>可以父子传参；<br><strong>slot的通俗理解</strong><br>是“占坑”，在组件模板中占好了位置，当使用该组件标签时候，组件标签里面的内容就会自动填坑(替换组件模板中<code>&lt;slot&gt;</code>位置)，当插槽也就是坑<code>&lt;slot name=”mySlot”&gt;</code>有命名时，组件标签中使用属性<code>slot=”mySlot”</code>的元素就会替换该对应位置内容；   </p>
+<a id="more"></a>
+<h1 id="为什么使用slot"><a href="#为什么使用slot" class="headerlink" title="为什么使用slot"></a>为什么使用slot</h1><ul>
+<li>组件的插槽：<ul>
+<li>组件的插槽是为了让我们封装的组件更加具有扩展性。</li>
+<li>让使用者可以决定组件内部的一些内容到底展示了什么。</li>
+</ul>
+</li>
+<li>例子: 移动网站中的导航栏。<ul>
+<li>移动开发中，几乎每个页面都有导航栏。</li>
+<li>导航栏我们必然会封装成一个插件，比如<code>nav-bar</code>组件。</li>
+<li>一旦有了这个组件，我们就可以在多个页面中复用了。</li>
+</ul>
+</li>
+<li>但是，每个页面的导航都是不一样的，以京东<code>M</code>站为例</li>
+</ul>
+<p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/slot.png?raw=true" alt="image"></p>
+<h2 id="如何封装这类组件呢？"><a href="#如何封装这类组件呢？" class="headerlink" title="如何封装这类组件呢？"></a>如何封装这类组件呢？</h2><ul>
+<li>如何去封装这类的组件呢？<ul>
+<li>它们也有很多区别，但是也有很多共性。</li>
+<li>如果我们每一个单独去封装一个组件，显然不合适，比如每个页面都返回，这部分内容我们就要重复去封装。</li>
+<li>但是，如果我们封装成一个，好像也不合理：有些左侧是菜单，有些是返回，有些中间是搜索，有些是文字，等等。</li>
+</ul>
+</li>
+<li>如何封装合适呢？抽取共性，保留不同。<ul>
+<li>最好的封装方式就是将共性抽取到组件中，将不同暴露为插槽。</li>
+<li>一旦我们预留了插槽，就可以让使用者根据自己的需求，决定插槽中插入什么内容。</li>
+<li>是搜索框，还是文字，还是菜单。由调用者自己来决定。</li>
+</ul>
+</li>
+<li>这就是为什么我们要学习组件中的插槽<code>slot</code>的原因。</li>
+</ul>
+<h1 id="slot-基本使用"><a href="#slot-基本使用" class="headerlink" title="slot 基本使用"></a>slot 基本使用</h1><ul>
+<li>如何使用<code>slot</code>？<ul>
+<li>在子组件中，使用特殊的元素<code>&lt;slot&gt;</code>就可以为子组件开启一个插槽。</li>
+<li>该插槽插入什么内容取决于父组件如何使用。</li>
+</ul>
+</li>
+<li>通过一个简单的例子，来给子组件定义一个插槽：<ul>
+<li><code>&lt;slot&gt;</code>中的内容表示，如果没有在该组件中插入任何其他内容，就默认该内容。</li>
+<li>有了这个插槽后，父组件如何使用呢？请看下面的例子。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/slot01.png?raw=true" alt="image"><img src="https://github.com/Anson212/magentoWeb/blob/master/img/slot02.png?raw=true" alt="image"></p>
+<h1 id="具名插槽slot"><a href="#具名插槽slot" class="headerlink" title="具名插槽slot"></a>具名插槽slot</h1><ul>
+<li>当子组件的功能复杂时，子组件的插槽可能并非是一个。<ul>
+<li>比如我们封装一个导航栏的子组件，可能就需要三个插槽，分别代表左边、中间、右边。</li>
+<li>那么，外面在给插槽插入内容的时候，如何区分插入的是哪一个呢？</li>
+<li>这个时候就需要给插槽起一个名字。</li>
+</ul>
+</li>
+<li>如何使用具名插槽呢？<ul>
+<li>非常简单，只需要给<code>slot</code>元素一个<code>name</code>属性即可。</li>
+<li><code>&lt;slot name=&quot;myslot&quot;&gt;&lt;/slot&gt;</code></li>
+</ul>
+</li>
+<li>结合案例 简单理解具名插槽的用法。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">	&lt;cpn&gt;&lt;span slot="center"&gt;标题&lt;/span&gt;&lt;/cpn&gt;</span><br><span class="line">	&lt;cpn&gt;&lt;span slot="left"&gt;返回&lt;/span&gt;&lt;/cpn&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;template id="cpn"&gt;</span></span><br><span class="line"><span class="regexp">	&lt;div&gt;</span></span><br><span class="line"><span class="regexp">		&lt;slot name="left"&gt;&lt;span&gt;左边&lt;/</span>span&gt;&lt;/slot&gt;</span><br><span class="line">		&lt;slot name=<span class="string">"center"</span>&gt;&lt;span&gt;中间&lt;/span&gt;&lt;/slot&gt;</span><br><span class="line">		&lt;slot name=<span class="string">"right"</span>&gt;&lt;span&gt;右边&lt;/span&gt;&lt;/slot&gt;</span><br><span class="line">	&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script src=<span class="string">"../js/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">		el:<span class="string">"#app"</span>,</span><br><span class="line">		components:&#123;</span><br><span class="line">			cpn:&#123;</span><br><span class="line">				template:<span class="string">"#cpn"</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="编译作用域"><a href="#编译作用域" class="headerlink" title="编译作用域"></a>编译作用域</h1><ul>
+<li>在真正学习插槽之前，需要先理解一个概念：编译作用域。</li>
+<li>官方对于编译的作用域解析比较简单，我们来通过一个例子来理解这个概念。</li>
+<li>考虑下面的代码是否最终可以渲染出来：<ul>
+<li><code>&lt;my-cpn v-show=&quot;isShow&quot;&gt;&lt;/my-cpn&gt;</code>,我们使用了<code>isShow</code>属性。</li>
+<li><code>isShow</code>属性包含在组件中，也包含在<code>Vue</code>实例中。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">	&lt;my-cpn v-show=<span class="string">"isShow"</span>&gt;&lt;/my-cpn&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=<span class="string">"myCpn"</span>&gt;</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;h2&gt;我能不能显示出来呢&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="../</span>js/vue.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	const app = new Vue(&#123;</span></span><br><span class="line">		el:"#app",</span><br><span class="line">		data:&#123;</span><br><span class="line">			isShow:<span class="literal">true</span></span><br><span class="line">		&#125;,</span><br><span class="line">		components:&#123;</span><br><span class="line">			cpn:&#123;</span><br><span class="line">				template:<span class="string">"#myCpn"</span>,</span><br><span class="line">				data()&#123;</span><br><span class="line">					<span class="keyword">return</span> &#123;</span><br><span class="line">						isShow: <span class="literal">false</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>答案：最终是可以渲染出来的，也就是使用的是<code>Vue</code>实例的属性。</p>
+</li>
+<li><p>原因：</p>
+<ul>
+<li>官方给出了一条准则：<strong>父组件模本的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子组件作用域内编译。</strong></li>
+<li>而我们在使用<code>&lt;my-cpn v-show=&quot;isShow&quot;&gt;&lt;/my-cpn&gt;</code>的时候，整个组件的使用过程是相当于在父组件中出现的。</li>
+<li>那它的作用域就是父组件，使用的属性也是属于父组件的属性。</li>
+<li>因此，<code>isShow</code>使用的是<code>Vue</code>实例中的属性，而不是子组件的属性。</li>
+</ul>
+</li>
+</ul>
+<h2 id="作用域插槽：准备"><a href="#作用域插槽：准备" class="headerlink" title="作用域插槽：准备"></a>作用域插槽：准备</h2><ul>
+<li>作用域插槽是<code>slot</code>一个比较难理解的点。</li>
+<li><p>这里，用一句话对其做一个总结，然后我们在后面的案例中体会：</p>
+<ul>
+<li>父组件替换插槽的标签，但是内容由子组件来提供。</li>
+</ul>
+</li>
+<li><p>需求：</p>
+<ul>
+<li>子组件中包括一组数据，比如：<code>pLanguages: [&#39;JavaScript&#39;, &#39;C++&#39;, &#39;Java&#39;, &#39;C#&#39;, &#39;Python&#39;, &#39;Go&#39;, &#39;Swift&#39;]</code>。 </li>
+<li>需要在多个界面进行展示：<ul>
+<li>某些界面是以水平方向一一展示。</li>
+<li>某些界面是以列表形式展示的。<br>某些界面直接展示一个数组</li>
+</ul>
+</li>
+<li>在子组件，希望父组件告诉我们如何展示，那怎么办呢？<ul>
+<li>利用<code>slot</code>作用域就可以了。</li>
+</ul>
+</li>
+<li>看看子组件的定义：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">	&lt;cpn&gt;&lt;/cpn&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;template id="cpn"&gt;</span></span><br><span class="line"><span class="regexp">	&lt;div&gt;</span></span><br><span class="line"><span class="regexp">		&lt;slot :data="pLanguages"&gt;</span></span><br><span class="line"><span class="regexp">			&lt;ul&gt;</span></span><br><span class="line"><span class="regexp">				&lt;li v-for="item in pLanguages"&gt;&#123;&#123;item&#125;&#125;&lt;/</span>li&gt;</span><br><span class="line">			&lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">		&lt;/</span>slot&gt;</span><br><span class="line">	&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script src=<span class="string">"../js/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">		el:<span class="string">"#app"</span>,</span><br><span class="line">		components:&#123;</span><br><span class="line">			cpn:&#123;</span><br><span class="line">				template:<span class="string">"#cpn"</span>,</span><br><span class="line">				data()&#123;</span><br><span class="line">					<span class="keyword">return</span> &#123;</span><br><span class="line">						pLanguages: [<span class="string">'JavaScript'</span>, <span class="string">'C++'</span>, <span class="string">'Java'</span>, <span class="string">'C#'</span>, <span class="string">'Python'</span>, <span class="string">'Go'</span>, <span class="string">'Swift'</span>]</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="作用域插槽：使用"><a href="#作用域插槽：使用" class="headerlink" title="作用域插槽：使用"></a>作用域插槽：使用</h2><ul>
+<li>在父组件使用我们的子组件时，从子组件中拿到数据：<ul>
+<li>我们通过<code>&lt;template slot-scope=&quot;slotProps&quot;&gt;</code>获取到<code>slotProps</code>属性。</li>
+<li>再通过<code>slotProps.data</code>就可以获取到刚才我们传入的<code>data</code>了</li>
+</ul>
+</li>
+<li>代码如下：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">&lt;cpn&gt;&lt;/cpn&gt;</span><br><span class="line">&lt;cpn&gt;</span><br><span class="line">	&lt;!--目的是获取子组件中的pLanguages--&gt;</span><br><span class="line">	&lt;template slot-scope=<span class="string">"slotProps"</span>&gt;</span><br><span class="line">		&lt;span&gt;&#123;&#123;slotProps.data.join(<span class="string">' - '</span>)&#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/cpn&gt;</span></span><br><span class="line"><span class="regexp">&lt;cpn&gt;</span></span><br><span class="line"><span class="regexp">    &lt;!--目的是获取子组件中的pLanguages--&gt;</span></span><br><span class="line"><span class="regexp">    &lt;template slot-scope="slotProps"&gt;</span></span><br><span class="line"><span class="regexp">      &lt;!--&lt;span v-for="item in slot.data"&gt;&#123;&#123;item&#125;&#125; * &lt;/</span>span&gt;--&gt;</span><br><span class="line">      &lt;span&gt;&#123;&#123;slotProps.data.join(<span class="string">' * '</span>)&#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>template&gt;</span><br><span class="line"> &lt;<span class="regexp">/cpn&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;template id=<span class="string">"cpn"</span>&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;slot :data=<span class="string">"pLanguages"</span>&gt;</span><br><span class="line">		&lt;ul&gt;</span><br><span class="line">			&lt;li v-<span class="keyword">for</span>=<span class="string">"item in pLanguages"</span>&gt;&#123;&#123;item&#125;&#125;&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">		&lt;/u</span>l&gt;</span><br><span class="line">	&lt;<span class="regexp">/slot&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="../</span>js/vue.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">const app = new Vue(&#123;</span></span><br><span class="line">	el:"#app",</span><br><span class="line">	components:&#123;</span><br><span class="line">		cpn:&#123;</span><br><span class="line">			template:<span class="string">"#cpn"</span>,</span><br><span class="line">			data()&#123;</span><br><span class="line">				<span class="keyword">return</span> &#123;</span><br><span class="line">					pLanguages: [<span class="string">'JavaScript'</span>, <span class="string">'C++'</span>, <span class="string">'Java'</span>, <span class="string">'C#'</span>, <span class="string">'Python'</span>, <span class="string">'Go'</span>, <span class="string">'Swift'</span>]</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>==总结：==</p>
+<p>以上所述的是vue中组件化的理解，哪里有什么错误的欢迎指出修正， 希望对大家有所帮助！！！</p>
 
       
     </div>
@@ -547,7 +636,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Ajax/" rel="tag"><i class="fa fa-tag"></i> Ajax</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
         </div>
       
@@ -560,8 +649,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/10/小程序/微信小程序通过api接口将json数据展现到小程序示例/" rel="next" title="微信小程序通过api接口将json数据展现到小程序示例">
-                <i class="fa fa-chevron-left"></i> 微信小程序通过api接口将json数据展现到小程序示例
+              <a href="/2019/07/14/vue/vue组件化开发学习(一)/" rel="next" title="Vue组件化开发学习(一)">
+                <i class="fa fa-chevron-left"></i> Vue组件化开发学习(一)
               </a>
             
           </div>
@@ -569,10 +658,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/21/Ajax/Ajax入门和发送http请求/" rel="prev" title="Ajax入门和发送http请求">
-                Ajax入门和发送http请求 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -724,7 +809,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是同源策略"><span class="nav-number">2.</span> <span class="nav-text">什么是同源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源"><span class="nav-number">3.</span> <span class="nav-text">同源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨域问题的解决方案"><span class="nav-number">4.</span> <span class="nav-text">跨域问题的解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSONP"><span class="nav-number">5.</span> <span class="nav-text">JSONP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置proxyTable解决跨域问题"><span class="nav-number">6.</span> <span class="nav-text">配置proxyTable解决跨域问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue中的slot-插槽"><span class="nav-number">1.</span> <span class="nav-text">vue中的slot(插槽)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么使用slot"><span class="nav-number">2.</span> <span class="nav-text">为什么使用slot</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何封装这类组件呢？"><span class="nav-number">2.1.</span> <span class="nav-text">如何封装这类组件呢？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slot-基本使用"><span class="nav-number">3.</span> <span class="nav-text">slot 基本使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具名插槽slot"><span class="nav-number">4.</span> <span class="nav-text">具名插槽slot</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译作用域"><span class="nav-number">5.</span> <span class="nav-text">编译作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域插槽：准备"><span class="nav-number">5.1.</span> <span class="nav-text">作用域插槽：准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域插槽：使用"><span class="nav-number">5.2.</span> <span class="nav-text">作用域插槽：使用</span></a></li></ol></li></ol></div>
             
 
           </div>
