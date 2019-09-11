@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -100,16 +100,18 @@
 
 
 
-<meta name="description" content="行至水穷处,坐看云起时">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lolint&#39;s">
-<meta property="og:url" content="http://lolint.com/categories/git/index.html">
+<meta name="description" content="vuex是在中大型项目中必不可少的状态管理组件，刷新会重新更新状态，但是有时候我们并不希望如此。例如全局相关的，如登录状态、token、以及一些不常更新的状态等，我们更希望能够固化到本地，减少无用的接口访问，以及更佳的用户体验。 安装起步1npm i -S vuex-persistedstate">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuex持久化 vuex-persistedstate">
+<meta property="og:url" content="http://lolint.com/2019/07/16/vue/vuex持久化 vuex-persistedstate/index.html">
 <meta property="og:site_name" content="Lolint&#39;s">
-<meta property="og:description" content="行至水穷处,坐看云起时">
+<meta property="og:description" content="vuex是在中大型项目中必不可少的状态管理组件，刷新会重新更新状态，但是有时候我们并不希望如此。例如全局相关的，如登录状态、token、以及一些不常更新的状态等，我们更希望能够固化到本地，减少无用的接口访问，以及更佳的用户体验。 安装起步1npm i -S vuex-persistedstate">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-11T06:02:07.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lolint&#39;s">
-<meta name="twitter:description" content="行至水穷处,坐看云起时">
+<meta name="twitter:title" content="vuex持久化 vuex-persistedstate">
+<meta name="twitter:description" content="vuex是在中大型项目中必不可少的状态管理组件，刷新会重新更新状态，但是有时候我们并不希望如此。例如全局相关的，如登录状态、token、以及一些不常更新的状态等，我们更希望能够固化到本地，减少无用的接口访问，以及更佳的用户体验。 安装起步1npm i -S vuex-persistedstate">
 
 
 
@@ -139,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://lolint.com/categories/git/"/>
+  <link rel="canonical" href="http://lolint.com/2019/07/16/vue/vuex持久化 vuex-persistedstate/"/>
 
 
 
 
 
-  <title>分类: git | Lolint's</title>
+  <title>vuex持久化 vuex-persistedstate | Lolint's</title>
   
 
 
@@ -164,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,55 +304,273 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>git<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lolint.com/2019/07/16/vue/vuex持久化 vuex-persistedstate/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lolint">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lolint's">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/04/10/git/git常用代码/" itemprop="url">
-              
-                <span itemprop="name">git常用代码</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">vuex持久化 vuex-persistedstate</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-10T20:27:53+08:00"
-              content="2018-04-10" >
-          04-10
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T20:27:53+08:00">
+                2019-07-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/07/16/vue/vuex持久化 vuex-persistedstate/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/07/16/vue/vuex持久化 vuex-persistedstate/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  355
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>vuex</code>是在中大型项目中必不可少的状态管理组件，刷新会重新更新状态，但是有时候我们并不希望如此。例如全局相关的，如登录状态、<code>token</code>、以及一些不常更新的状态等，我们更希望能够固化到本地，减少无用的接口访问，以及更佳的用户体验。</p>
+<h1 id="安装起步"><a href="#安装起步" class="headerlink" title="安装起步"></a>安装起步</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S vuex-persistedstate</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>目前的环境版本：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"vue"</span>: <span class="string">"2.2.4"</span>,</span><br><span class="line"><span class="string">"vuex"</span>: <span class="string">"^2.5.0"</span>,</span><br><span class="line"><span class="string">"vuex-persistedstate"</span>: <span class="string">"^2.5.4"</span></span><br></pre></td></tr></table></figure>
+<p><code>vuex</code>已经升级到了<code>3.0.1</code>，看了<code>release note</code>没有发现太过分的升级，预计不会出现不兼容的情况，有感兴趣的小伙伴可以升级体验一下。   </p>
+<h1 id="配置使用"><a href="#配置使用" class="headerlink" title="配置使用"></a>配置使用</h1><p>在<code>vuex</code>初始化时候，作为组件引入。   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> persistedState <span class="keyword">from</span> <span class="string">'vuex-persistedstate'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    plugins: [persistedState()]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 自定义存储方式  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span>vuex-persistedstate<span class="string">`默认使用`</span>localStorage<span class="string">`来固化数据，一些特殊情况要如何应对呢？（如：`</span>safari<span class="string">`的无痕浏览模式）    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 需要使用`</span>sessionStorage<span class="string">`的情况 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">plugins: [</span><br><span class="line">    persistedState(&#123; <span class="attr">storage</span>: <span class="built_in">window</span>.sessionStorage &#125;)</span><br><span class="line">]</span><br><span class="line"><span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 使用`</span>cookie<span class="string">`的情况   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">import</span> persistedState <span class="keyword">from</span> <span class="string">'vuex-persistedstate'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> Cookies <span class="keyword">from</span> <span class="string">'js-cookie'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  plugins: [</span><br><span class="line">    persistedState(&#123;</span><br><span class="line">      storage: &#123;</span><br><span class="line">        getItem: <span class="function"><span class="params">key</span> =&gt;</span> Cookies.get(key),</span><br><span class="line">        setItem: <span class="function">(<span class="params">key, value</span>) =&gt;</span> Cookies.set(key, value, &#123; <span class="attr">expires</span>: <span class="number">7</span> &#125;),</span><br><span class="line">        removeItem: <span class="function"><span class="params">key</span> =&gt;</span> Cookies.remove(key)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><p><a href="https://github.com/robinvdvleuten/vuex-persistedstate" target="_blank" rel="noopener">vuex-persistedstate</a>  </p>
+</li>
+<li><p><a href="https://github.com/js-cookie/js-cookie" target="_blank" rel="noopener">js-cookie</a></p>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
+    
+   <div>
+      
+ </div>
 
+     
+    
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="Lolint 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+    
+    <div>
+  
+    
+ <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-star"></i>感谢您的阅读-------------</div>
+<br/>
+<div style="border: 1px solid black">
+<div style="margin-left:10px">
+<span style="font-weight:blod">版权声明</span>
+<img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020242973cc.png" >
+<br/>
+<p style="font-size: 10px;line-height: 30px"><a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> by <a href="http://lolint.com" style="color:#258FC6">Lolint</a> is licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">Creative Commons BY-NC-ND 4.0 International License</a>.<br/>
+由<a href="http://lolint.com" style="color:#258FC6">Lolint</a>创作并维护的<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a>博客采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。<br/>
+本文首发于<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> 博客（ <a href="http://lolint.com" style="color:#258FC6">http://lolint.com</a> ），版权所有，侵权必究。</p>
+</div>
+</div>
+
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/14/vue/vue组件开发学习(二)之slot(插槽)/" rel="next" title="Vue组件开发学习(二)之slot(插槽)">
+                <i class="fa fa-chevron-left"></i> Vue组件开发学习(二)之slot(插槽)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -358,6 +578,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -378,8 +607,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -454,6 +692,22 @@
          
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装起步"><span class="nav-number">1.</span> <span class="nav-text">安装起步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置使用"><span class="nav-number">2.</span> <span class="nav-text">配置使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -615,6 +869,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
