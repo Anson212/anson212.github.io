@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="">
+
+
+
+
+
+  <meta name="keywords" content="Vue," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习的目的能够熟练的使用vuex，能够在实际项目中运用。    Vuex介绍  Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。  所有组件的状态,简单来讲，就是 data 里的属性，如果有多个组件 需要使用同一个数据，使用 props 会显得很复杂，尤其是非父子组件 和 父组件和后代组件">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuex的学习笔记">
+<meta property="og:url" content="http://lolint.com/2019/07/17/vue/vuex的学习笔记/index.html">
+<meta property="og:site_name" content="Lolint&#39;s">
+<meta property="og:description" content="学习的目的能够熟练的使用vuex，能够在实际项目中运用。    Vuex介绍  Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。  所有组件的状态,简单来讲，就是 data 里的属性，如果有多个组件 需要使用同一个数据，使用 props 会显得很复杂，尤其是非父子组件 和 父组件和后代组件">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue.jpg?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/VUEX.png?raw=true">
+<meta property="og:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vuex-getters.png?raw=true">
+<meta property="og:updated_time" content="2019-09-14T01:12:06.637Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vuex的学习笔记">
+<meta name="twitter:description" content="学习的目的能够熟练的使用vuex，能够在实际项目中运用。    Vuex介绍  Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。  所有组件的状态,简单来讲，就是 data 里的属性，如果有多个组件 需要使用同一个数据，使用 props 会显得很复杂，尤其是非父子组件 和 父组件和后代组件">
+<meta name="twitter:image" content="https://github.com/Anson212/magentoWeb/blob/master/img/vue.jpg?raw=true">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://lolint.com/2019/07/17/vue/vuex的学习笔记/"/>
+
+
+
+
+
+  <title>vuex的学习笔记 | Lolint's</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lolint's</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Try to be yourself</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lolint.com/2019/07/17/vue/vuex的学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lolint">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lolint's">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vuex的学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T20:27:53+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2019/07/17/vue/vuex的学习笔记/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/07/17/vue/vuex的学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,567
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/vue.jpg?raw=true" alt="image"></p>
+<h1 id="学习的目的"><a href="#学习的目的" class="headerlink" title="学习的目的"></a>学习的目的</h1><p>能够熟练的使用<code>vuex</code>，能够在实际项目中运用。   </p>
+<h1 id="Vuex介绍"><a href="#Vuex介绍" class="headerlink" title="Vuex介绍"></a>Vuex介绍</h1><blockquote>
+<p> <code>Vuex</code> 是一个专为 <code>Vue.js</code> 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+<p> 所有组件的状态,简单来讲，就是 <code>data</code> 里的属性，如果有多个组件 需要使用同一个数据，使用 <code>props</code> 会显得很复杂，尤其是非父子组件 和 父组件和后代组件 之间的数据传输问题，这时候就可以用到 <code>vuex</code>。</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>借助一张图片，简短的对<code>vuex</code>的状态管理进行一个描述</p>
+</blockquote>
+<p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/VUEX.png?raw=true" alt="image">     </p>
+<ul>
+<li>从上图可以看出<code>vuex</code>主要包含<code>actions</code>、<code>mutations</code>、<code>state</code> </li>
+<li>交互过程中，渲染：<code>vue components</code>根据<code>state</code>进行渲染,响应：通过触发<code>actions</code>相关事件调用<code>mutations</code>相关函数,<code>mutations</code>对<code>state</code>进行改变，<code>state</code>的改变引发<code>vue components</code>的重绘   </li>
+</ul>
+<blockquote>
+<p>状态的统一管理对大型项目提供了相当多的便利，数据的操作都可以通过vuex来进行，小型项目组件并不复杂，数据的交互层级不高，因此并不建议使用vuex进行数据交互   </p>
+</blockquote>
+<p>在对<code>vuex</code>进行描述之前送上<a href="https://vuex.vuejs.org/zh/guide/" target="_blank" rel="noopener">vuex官网</a>飞机票一张   </p>
+<ul>
+<li><code>backend</code> 后端后台。</li>
+<li><code>dispatch:</code>派遣，分发。<br>-<code>mutate</code>:改变，转变。</li>
+</ul>
+<ol>
+<li><code>state</code>每个<code>vue</code>组件都可以引用<code>$store.state</code>。</li>
+<li><code>mutation</code>更改 <code>Vuex</code> 的 <code>store</code> 中的状态的唯一方法是提交 <code>mutation</code>。注意<code>motution</code>里面是同步操作</li>
+<li><code>actions</code>管理异步操作</li>
+</ol>
+<h2 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h2><blockquote>
+<p>挂载<code>store</code>. 实际上在<code>Vue</code>的原型加<code>$router</code>属性<code>Vue.prototype.$store=store</code><br>所有<code>vue</code>组件都可以访<code>$store.==store</code>是一个对象<br>这个对象里面有<code>5</code>个重要属性 <code>$store.state</code>   </p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">state: &#123;</span><br><span class="line">  count:<span class="number">10</span></span><br><span class="line">&#125;,</span><br><span class="line">mutations: &#123;</span><br><span class="line"></span><br><span class="line">&#125;,</span><br><span class="line">actions: &#123;</span><br><span class="line"></span><br><span class="line">&#125;,</span><br><span class="line">getters:&#123;</span><br><span class="line"></span><br><span class="line">&#125;,</span><br><span class="line">modules:&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## vuex安装</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">npm install vuex --save-dev</span><br></pre></td></tr></table></figure>
+<p>新建文件夹<code>store</code>，在文件夹中新建<code>index.js</code>   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+<p>在main.js主文件里面使用并挂载</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store/index'</span>   </span><br><span class="line"></span><br><span class="line"><span class="comment">// 挂载实际上在Vue的原型加$router属性Vue.prototype.$store=store.vue实例对象都可以访$store.==store</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    router,</span><br><span class="line">    store,<span class="comment">//Vue.prototype.$store=store</span></span><br><span class="line">    components,</span><br><span class="line">    template:<span class="string">'&lt;App/&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># vuex核心之State</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">**获取`</span>state<span class="string">`的值**</span></span><br><span class="line"><span class="string">&gt; `</span>Vuex<span class="string">` 的状态存储是响应式的。当 `</span>Vue<span class="string">` 组件从 `</span>store<span class="string">` 中读取状态的时候，若 `</span>store<span class="string">` 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">要想做到响应式</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">前提：是在`</span>mutation<span class="string">`中定义函数修改`</span>state<span class="string">`值。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 最好提前在你的`</span>store<span class="string">`中初始化好所有所需的属性。</span></span><br><span class="line"><span class="string">- 当需要在对象上添加新属性时，使用`</span>Vue.set(obj,<span class="string">'newProp'</span>,value)<span class="string">`就是响应式。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">新加入的属性和值不是响应式。修改已有的值还是响应的，增加属性使用`</span>Vue.set(obj,<span class="string">'newProp'</span>,<span class="number">123</span>)<span class="string">`就是响应式了。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">info:&#123;</span><br><span class="line">    name: <span class="string">'hebe'</span>,</span><br><span class="line">    age: <span class="number">40</span>,</span><br><span class="line">    height: <span class="number">1.98</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">state.info.name = <span class="string">'old-hebe'</span> <span class="comment">//修改已有的值还是响应式</span></span><br><span class="line">state.info.address = <span class="string">'guangzhou'</span> <span class="comment">//增加新的属性和值，该属性不是响应的。但是state.info确实增加了address属性。但是html视图不会发生变化。</span></span><br><span class="line">state.info[<span class="string">'id'</span>]= <span class="number">100</span>  <span class="comment">//不是响应式。</span></span><br><span class="line">Vue.set(state.info, <span class="string">'sex'</span>, <span class="string">'男'</span>) <span class="comment">//通过vue.set()增加属性和值就是响应式的</span></span><br></pre></td></tr></table></figure>
+<h2 id="mapState"><a href="#mapState" class="headerlink" title="mapState"></a>mapState</h2><blockquote>
+<p>不管用不用<code>mapState</code>辅助函数，<code>vue</code>当前实例访问<code>store.state</code>数据都是在<strong><code>computed</code>计算属性</strong>内。</p>
+<p>注意：进入到计算属性<code>computed</code>的属性。<code>vue</code>实例可以直接使用。同<code>data</code>数据一样。<br><code>mapState</code>通过扩展运算符将 <code>store.state</code>属性映射<code>this</code>属性，<code>this</code>指当期<code>vue</code>实例对象。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//store.js</span></span><br><span class="line">state: &#123;</span><br><span class="line">    count: <span class="number">100</span>,</span><br><span class="line">    str: <span class="string">'abc'</span>,</span><br><span class="line">    student: [</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zs'</span>, <span class="attr">age</span>: <span class="number">10</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'ww'</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zq'</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>没用<code>mapState</code>之前 <strong>当前<code>vue</code>实例取<code>store.state</code>属性</strong> 数据是这样的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//computed</span></span><br><span class="line">    count()&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.count</span><br><span class="line">    &#125;,</span><br><span class="line">    str()&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.str</span><br><span class="line">    &#125;,</span><br><span class="line">    student()&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.student</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>在用了<code>mapState</code>   </p>
+<p><strong>注意：</strong>多用对象写法 <code>...mapState({ count: &quot;count&quot;, str: &quot;str&quot;, student: &quot;student&quot; })</code>,   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方式1数组形式。这样当前vue实例上就有了count，str,student属性。值就是对应的值。</span></span><br><span class="line">...mapState([<span class="string">'count'</span>,<span class="string">'str'</span>,<span class="string">'student'</span>]),</span><br><span class="line"></span><br><span class="line"><span class="comment">//方式2对象形式 不一定要同名 </span></span><br><span class="line"><span class="comment">//不可以这样写 ...mapState(&#123; count，str， student&#125;),</span></span><br><span class="line">...mapState(&#123; <span class="attr">count</span>: <span class="string">"count"</span>, <span class="attr">str</span>: <span class="string">"str"</span>, <span class="attr">student</span>: <span class="string">"student"</span> &#125;),</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者 `state =&gt; state.count` 等同于 上面的'count'</span></span><br><span class="line">...mapState(&#123; <span class="attr">count</span>: <span class="function"><span class="params">state</span> =&gt;</span> state.count, <span class="attr">student</span>: <span class="string">"student"</span> &#125;),</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">![image](https://github.com/Anson212/magentoWeb/blob/master/img/vue-state.png?raw=true)   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># vuex核心之mutations</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 同步修改`</span>state<span class="string">`的值 写在`</span>vue<span class="string">`实例`</span>methods<span class="string">`里面</span></span><br><span class="line"><span class="string">- 更改`</span>Vuex<span class="string">`的`</span>store<span class="string">`中的状态(值)的唯一方法是提交`</span>mutation<span class="string">`。</span></span><br><span class="line"><span class="string">- `</span>Vuex<span class="string">`中的`</span>mutation<span class="string">` 非常类似于**事件**`</span>methods<span class="string">`：每一个`</span>mutation<span class="string">`都要一个字符串的 **事件类型`</span>(type)<span class="string">`** 和 一个 回调函数`</span>(handler)<span class="string">`。这个回调函数就是我们实际进行状态更改的地方，并且它会接受`</span>state<span class="string">`作为第一个参数：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 一条重要的原则就是要记住`</span>mutation<span class="string">`必须是同步函数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="comment">//store.js 在mutations中修改state</span></span><br><span class="line">mutations: &#123;</span><br><span class="line">  add(state)&#123;</span><br><span class="line">   state.count+=<span class="number">5</span></span><br><span class="line"> &#125;,</span><br><span class="line">  decrease(state)&#123;</span><br><span class="line">   state.count-=<span class="number">5</span></span><br><span class="line"> &#125;,</span><br><span class="line">  <span class="comment">// 提交载荷(接受其他参数),在大多数情况下,载荷是一个对象</span></span><br><span class="line">  addNum(state,payload)&#123;</span><br><span class="line">   state.count+=payload.num</span><br><span class="line"> &#125;,</span><br><span class="line">  decreaseNum(state,payload)&#123;</span><br><span class="line">   state.count-=payload.num</span><br><span class="line"> &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mapMutation"><a href="#mapMutation" class="headerlink" title="mapMutation"></a>mapMutation</h2><p>使用 <code>mapMutation</code> 同样两种方式。优先选择对象方式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象方式</span></span><br><span class="line">...mapMutations(&#123;</span><br><span class="line">  add:<span class="string">'add'</span>,</span><br><span class="line">  decrease:<span class="string">'decrease'</span>,</span><br><span class="line">  addNum:<span class="string">'addNum'</span>,</span><br><span class="line">  decreaseNum:<span class="string">'decreaseNum'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//数组方式</span></span><br><span class="line">...mapMutations([<span class="string">'add'</span>,<span class="string">'decrease'</span>,<span class="string">'addNum'</span>,<span class="string">'decreaseNum'</span>])</span><br></pre></td></tr></table></figure></p>
+<p>值得注意的是 <code>payload</code>的值是在<code>html</code>中传的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">"add"</span>&gt;add&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;button @click="decrease"&gt;jianfa&lt;/</span>button&gt;</span><br><span class="line">&lt;button @click=<span class="string">"addNum(&#123;num:10&#125;)"</span>&gt;addNum&lt;<span class="regexp">/button&gt; /</span><span class="regexp">/留意payload</span></span><br><span class="line"><span class="regexp">&lt;button @click="decreaseNum(&#123;num:10&#125;)"&gt;decreaseNum&lt;/</span>button&gt;</span><br></pre></td></tr></table></figure>
+<p>不用<code>mapMutation</code>。在<code>methods</code>里面通过<strong><code>this.$store.commit(&#39;xxx&#39;)</code></strong> 提交 <code>mutation</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> add()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.commit(<span class="string">'add'</span>)</span><br><span class="line">&#125;,</span><br><span class="line"> decrease()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.commit(<span class="string">'decrease'</span>)</span><br><span class="line">&#125;,</span><br><span class="line">   <span class="comment">//注意：是在这里提交payload和mapMutation提交payload位置不同</span></span><br><span class="line"> addNum()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.commit(<span class="string">'addNum'</span>,&#123;<span class="attr">num</span>:<span class="keyword">this</span>.num&#125;) <span class="comment">//num是自己从data里面取出来的，</span></span><br><span class="line">&#125;,</span><br><span class="line"> decreaseNum()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.commit(<span class="string">'decreaseNum'</span>,&#123;<span class="attr">num</span>:<span class="keyword">this</span>.num&#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>在页面使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">"add"</span>&gt;add&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;button @click="decrease"&gt;jianfa&lt;/</span>button&gt;</span><br><span class="line">&lt;button @click=<span class="string">"addNum"</span>&gt;addNum&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;button @click="decreaseNum"&gt;decreaseNum&lt;/</span>button&gt;</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># vuex核心之Action</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- **异步修改`</span>state<span class="string">`的值**写在`</span>vue<span class="string">`实例`</span>methods<span class="string">`里面</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span>Actio<span class="string">`类似于 `</span>mutation<span class="string">`， 不同在于：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- `</span>Action<span class="string">`提交的是`</span>mutation<span class="string">`,而不是直接变更状态。</span></span><br><span class="line"><span class="string">- `</span>Action<span class="string">`可以包含任意异步操作。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">mutations: &#123;</span><br><span class="line">  add(state) &#123;</span><br><span class="line">    state.count += <span class="number">5</span></span><br><span class="line"> &#125;,</span><br><span class="line">  decrease(state) &#123;</span><br><span class="line">    state.count -= <span class="number">5</span></span><br><span class="line"> &#125;,</span><br><span class="line">&#125;</span><br><span class="line">actions: &#123;</span><br><span class="line">  <span class="comment">// context==store=$store</span></span><br><span class="line">  updataCount(context) &#123;</span><br><span class="line">  <span class="comment">//异步</span></span><br><span class="line">   setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    context.commit(<span class="string">'add'</span>) <span class="comment">//action里面提交moutaton</span></span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="mapActions"><a href="#mapActions" class="headerlink" title="mapActions"></a>mapActions</h2><p>使用<code>mapActions</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...mapActions(&#123;</span><br><span class="line">  updataCount:<span class="string">'updataCount'</span>,</span><br><span class="line">  updataNum:<span class="string">'updataNum'</span></span><br><span class="line"> &#125;)</span><br><span class="line"><span class="comment">//数组形式</span></span><br><span class="line">...mapActions([<span class="string">'updataCount'</span>,<span class="string">'updataNum'</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">"updataCount"</span>&gt;updataCount&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;button @click="updataNum(&#123;num:20&#125;)"&gt;updataNum&lt;/</span>button&gt; <span class="comment">//同mapMutation payload传参</span></span><br></pre></td></tr></table></figure>
+<p>不用<code>mapAction</code>。在<code>methods</code>里面通过<strong><code>this.$store.dispatch(&#39;xxx&#39;)</code></strong> 操作 <code>Action</code>中定义的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//methods</span></span><br><span class="line">updataCount()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.dispatch(<span class="string">'updataCount'</span>)</span><br><span class="line">&#125;,</span><br><span class="line">updataNum()&#123;</span><br><span class="line">  <span class="keyword">this</span>.$store.dispatch(<span class="string">'updataNum'</span>,&#123;<span class="attr">num</span>:<span class="number">20</span>&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">"updataCount"</span>&gt;updataCount&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;button @click="updataNum"&gt;updataNum&lt;/</span>button&gt;</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># vuex核心之gettets</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">**获取`</span>state<span class="string">`的值**</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; `</span>Vuex<span class="string">`允许我们在`</span>store<span class="string">`中定义`</span><span class="string">"getter"</span><span class="string">` (可以认为是`</span>store<span class="string">`的计算属性`</span>computed<span class="string">`)。就像计算属性一样，`</span>getter<span class="string">`的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; `</span>getters<span class="string">`里面函数`</span>fn<span class="string">`行参依次是(`</span>state<span class="string">`,`</span>getters<span class="string">`)只接受两个参数。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javscript</span><br><span class="line">getters: &#123;</span><br><span class="line">  <span class="comment">//getters里面的方法接收一个state参数，指向state，可直接调用state中的数据</span></span><br><span class="line">  getMore20(state)&#123;</span><br><span class="line">    <span class="comment">//直接返回一个值</span></span><br><span class="line">   <span class="keyword">return</span> state.student.filter(<span class="function"><span class="params">element</span>=&gt;</span>element.age&gt;<span class="number">20</span>)</span><br><span class="line"> &#125;,</span><br><span class="line">  <span class="comment">//getters 也可以接受其他 getter 必须是作为第二个参数：</span></span><br><span class="line">  getMore20Length(state,getters)&#123;</span><br><span class="line">    <span class="comment">//直接返回一个值</span></span><br><span class="line">   <span class="keyword">return</span> getters.getMore20.length</span><br><span class="line"> &#125;,</span><br><span class="line">  <span class="comment">// 用户想传参就返回一个函数</span></span><br><span class="line">  getMoreAge(state) &#123;</span><br><span class="line">    <span class="comment">//返回一个函数。</span></span><br><span class="line">   <span class="keyword">return</span> <span class="function"><span class="params">age</span> =&gt;</span> state.student.filter(<span class="function"><span class="params">element</span> =&gt;</span> element.age &gt; age)</span><br><span class="line"> &#125;,</span><br><span class="line">   </span><br><span class="line">  getMoreAgeLen(state,getters)&#123;</span><br><span class="line">    <span class="comment">// return getters.getMoreAge.length</span></span><br><span class="line">     <span class="keyword">return</span> <span class="function"><span class="params">age</span>=&gt;</span>state.student.filter(<span class="function"><span class="params">element</span>=&gt;</span>element.age&gt;age).length</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>getters</code>属性大部分放在<code>vue</code>实例<code>computed</code>计算属性中。同<code>mapState</code>一样。</p>
+</blockquote>
+<h2 id="mapGetters"><a href="#mapGetters" class="headerlink" title="mapGetters"></a>mapGetters</h2><p>不用<code>mapGetters</code>来操作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">getMore20() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.getMore20;</span><br><span class="line"> &#125;,</span><br><span class="line">  getMore20Length() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.getMore20Length;</span><br><span class="line"> &#125;,</span><br><span class="line">  getName() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.getName;</span><br><span class="line"> &#125;,</span><br><span class="line">  getMoreAge() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.getMoreAge;</span><br><span class="line"> &#125;,</span><br><span class="line">  getMoreAgeLen() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.getMoreAgeLen;</span><br><span class="line"> &#125;,</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>上面的操作比较繁琐，于是就可以使用<code>mapGetters</code></p>
+<ul>
+<li>优先对象写法(其实数组写法更加简单，用那种就取决于你的习惯了)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapGetters &#125; <span class="keyword">from</span> <span class="string">"vuex"</span>;</span><br><span class="line">...mapGetters(&#123;</span><br><span class="line">  getMore20:<span class="string">'getMore20'</span>,</span><br><span class="line">  getMore20Length:<span class="string">'getMore20Length'</span>,</span><br><span class="line">  getMoreAge:<span class="string">'getMoreAge'</span>,</span><br><span class="line">  getMoreAgeLen:<span class="string">'getMoreAgeLen'</span></span><br><span class="line">&#125;),</span><br><span class="line"><span class="comment">//数组写法</span></span><br><span class="line">...mapGetters([<span class="string">'getMore20'</span>,<span class="string">'getMore20Length'</span>,<span class="string">'getMoreAge'</span>,<span class="string">'getMoreAgeLen'</span>,]),</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;h4&gt;&#123;&#123;getMore20&#125;&#125;&lt;<span class="regexp">/h4&gt;</span></span><br><span class="line"><span class="regexp">&lt;h4&gt;&#123;&#123;getMore20Length&#125;&#125;&lt;/</span>h4&gt;</span><br><span class="line">&lt;h3&gt;&#123;&#123;getMoreAge(<span class="number">20</span>)&#125;&#125;&lt;<span class="regexp">/h3&gt;</span></span><br><span class="line"><span class="regexp">&lt;h3&gt;&#123;&#123;getMoreAgeLen(20)&#125;&#125;&lt;/</span>h3&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://github.com/Anson212/magentoWeb/blob/master/img/vuex-getters.png?raw=true" alt="image"></p>
+<h1 id="vuex核心之module"><a href="#vuex核心之module" class="headerlink" title="vuex核心之module"></a>vuex核心之module</h1><blockquote>
+<p>使用单一状态树，导致应用的所有状态集中到一个很大的对象。但是，当应用变得很大时，<code>store</code> 对象会变得臃肿不堪。<br><code>Vuex</code> 允许我们将 <code>store</code> 分割到模块<code>（module）</code>。每个模块拥有自己的 <code>state</code>、<code>mutation</code>、<code>action</code>、<code>getters</code>、甚至是嵌套子模块。</p>
+</blockquote>
+<h2 id="module定义"><a href="#module定义" class="headerlink" title="module定义"></a>module定义</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> moduleA = &#123;</span><br><span class="line">    state: &#123; ... &#125;,</span><br><span class="line">    mutations: &#123; ... &#125;,</span><br><span class="line">    actions: &#123; ... &#125;,</span><br><span class="line">    getters: &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> moduleB = &#123;</span><br><span class="line">    state: &#123; ... &#125;,</span><br><span class="line">    mutations: &#123; ... &#125;,</span><br><span class="line">    actions: &#123; ... &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    modules: &#123;</span><br><span class="line">        a: moduleA,</span><br><span class="line">        b: moduleB</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">store.state.a <span class="comment">// -&gt; moduleA 的状态</span></span><br><span class="line">store.state.b <span class="comment">// -&gt; moduleB 的状态</span></span><br></pre></td></tr></table></figure>
+<h1 id="module局部状态"><a href="#module局部状态" class="headerlink" title="module局部状态"></a>module局部状态</h1><p>对于模块内部的 <code>mutation</code> 和 <code>getter</code>，接收的第一个参数是模块的局部状态。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//即此状态为moduleA的state</span></span><br><span class="line"><span class="keyword">const</span> moduleA = &#123;</span><br><span class="line">state: &#123; <span class="attr">count</span>: <span class="number">0</span> &#125;,</span><br><span class="line">mutations: &#123;</span><br><span class="line">    increment (state) &#123;</span><br><span class="line">    <span class="comment">// state 模块的局部状态</span></span><br><span class="line">    state.count++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">//对于模块内部的 getter，根节点状态会作为第三个参数：</span></span><br><span class="line">getters: &#123;</span><br><span class="line">    doubleCount (state, getters, rootState) &#123;</span><br><span class="line">        <span class="keyword">return</span> state.count * <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同样，对于模块内部的 action，context.state 是局部状态，根节点的状态是 context.rootState这就是之前action的context不等于当前store对象的原因</span></span><br><span class="line">actions: &#123;</span><br><span class="line">    incrementIfOddOnRootSum (&#123; state, commit, rootState &#125;) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((state.count + rootState.count) % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">            commit(<span class="string">'increment'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Module</code>更多用法请参考官网   <a href="https://vuex.vuejs.org/zh/guide/modules.html" target="_blank" rel="noopener">VueX 文档 </a></p>
+
+      
+    </div>
+    
+    
+    
+    
+   <div>
+      
+ </div>
+
+     
+    
+    
+
+    
+
+    
+    
+    <div>
+  
+    
+ <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-star"></i>感谢您的阅读-------------</div>
+<br/>
+<div style="border: 1px solid black">
+<div style="margin-left:10px">
+<span style="font-weight:blod">版权声明</span>
+<img src="http://7xqmjb.com1.z0.glb.clouddn.com/2017020242973cc.png" >
+<br/>
+<p style="font-size: 10px;line-height: 30px"><a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> by <a href="http://lolint.com" style="color:#258FC6">Lolint</a> is licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">Creative Commons BY-NC-ND 4.0 International License</a>.<br/>
+由<a href="http://lolint.com" style="color:#258FC6">Lolint</a>创作并维护的<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a>博客采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#258FC6">创作共用保留署名-非商业-禁止演绎4.0国际许可证</a>。<br/>
+本文首发于<a href="http://lolint.com" style="color:#258FC6">lolint's Try to be yourself</a> 博客（ <a href="http://lolint.com" style="color:#258FC6">http://lolint.com</a> ），版权所有，侵权必究。</p>
+</div>
+</div>
+
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/16/vue/vuex持久化 vuex-persistedstate/" rel="next" title="vuex持久化 vuex-persistedstate">
+                <i class="fa fa-chevron-left"></i> vuex持久化 vuex-persistedstate
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Lolint" />
+            
+              <p class="site-author-name" itemprop="name">Lolint</p>
+              <p class="site-description motion-element" itemprop="description">行至水穷处,坐看云起时</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Anson212" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+         
+          
+
+        </div>
+         
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#学习的目的"><span class="nav-number">1.</span> <span class="nav-text">学习的目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuex介绍"><span class="nav-number">2.</span> <span class="nav-text">Vuex介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vuex"><span class="nav-number">2.1.</span> <span class="nav-text">vuex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mapState"><span class="nav-number">2.2.</span> <span class="nav-text">mapState</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mapMutation"><span class="nav-number">2.3.</span> <span class="nav-text">mapMutation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mapActions"><span class="nav-number">2.4.</span> <span class="nav-text">mapActions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mapGetters"><span class="nav-number">2.5.</span> <span class="nav-text">mapGetters</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vuex核心之module"><span class="nav-number">3.</span> <span class="nav-text">vuex核心之module</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#module定义"><span class="nav-number">3.1.</span> <span class="nav-text">module定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#module局部状态"><span class="nav-number">4.</span> <span class="nav-text">module局部状态</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+      
+    </div>
+    
+  
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lolint</span>
+
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+-->
+
+<div>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>&nbsp&nbsp&nbsp
+<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+</div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共29.7k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytvpOB5X';
+      var conf = '9abdc24e8ae17f397f6a8e0bd11c4319';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/javascript"
+color="0,0,0" opacity='0.7' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+  
+  
+</body>
+</html>
